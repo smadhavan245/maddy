@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UNIVERSE :</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <style>
+            body {
+                margin: 0;
+                font-family: "Audiowide", sans-serif;
+                background-image: image-set('spacee2.jpg');
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            .navbar a, .dropdown-btn {
+                float: right;
+                display: block;
+                color: navy;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .navbar a:hover, .dropdown-btn:hover {
+                background-color: #575757;
+                color: navy;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: navy;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #575757;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .navbar h1 {
+                float: left;
+                color: white;
+                margin: 0;
+                padding: 14px 20px;
+                font-size: 20px;
+            }
+            .love {
+                color: indigo;
+            }
+            .world {
+                color: aliceblue;
+            }
+            .planet-details {
+                display: none;
+                padding: 20px;
+                color: white;
+                background-color: none;
+                margin-top: 10px;
+                background-image: url('https://w0.peakpx.com/wallpaper/331/537/HD-wallpaper-our-solar-system-planets-system-space.jpg');
+                background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+            .hate {
+                margin-left: 2em;
+                margin-right: 5em;
+                padding: 0;
+                border: 2px solid whitesmoke;
+            }
+            .god {
+                margin: 2em;
+                padding: 0.5em;
+                border: 3px solid;
+                border-color: black;
+            
+            }
+            #mercury{
+                background-image: url(mercurry.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+            #venus{
+                background-image: url(venus.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+
+
+
+            #earth{
+                background-image: url(earth.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+
+
+
+
+
+
+            #mars{
+                background-image: url(MARS_THE_RED_PLANET.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+            #jupiter{
+                background-image: url(jupiter.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+
+
+
+            #saturn{
+                background-image: url(saturn.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+            #uranus{
+                background-image: url(uranus.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+
+            #neptune{
+                background-image: url(Neptune-featureIMG.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+            #pluto{
+                background-image: url('ploto2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+            }
+
+
+            .hm {
+                font-size: 25px;
+                font-style: italic;
+                color: whitesmoke;
+            }
+            section {
+                padding: 60px 20px;
+                margin-top: 50px;
+            }
+           
+        
+        </style>
+        <script>
+            function showPlanetDetails(planetId) {
+                const allDetails = document.querySelectorAll('.planet-details');
+                allDetails.forEach(detail => detail.style.display = 'none');
+                document.getElementById(planetId).style.display = 'block';
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>SPACE</h1>
+            <a href="#about-earth">About Earth</a>
+            <a href="#facts">Top Facts</a>
+            <a href="#planet-table">Planet Table</a>
+            <a href="#know">What You Know</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Planets</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPlanetDetails('mercury')">Mercury</a>
+                    <a href="#" onclick="showPlanetDetails('venus')">Venus</a>
+                    <a href="#" onclick="showPlanetDetails('earth')">Earth</a>
+                    <a href="#" onclick="showPlanetDetails('mars')">Mars</a>
+                    <a href="#" onclick="showPlanetDetails('jupiter')">Jupiter</a>
+                    <a href="#" onclick="showPlanetDetails('saturn')">Saturn</a>
+                    <a href="#" onclick="showPlanetDetails('uranus')">Uranus</a>
+                    <a href="#" onclick="showPlanetDetails('neptune')">Neptune</a>
+                    <a href="#" onclick="showPlanetDetails('pluto')">Pluto</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mercury" class="planet-details">
+            <h2>Mercury</h2>
+            <p>Mercury is the closest planet to the Sun and the smallest planet in the solar system.<br>Mercury is the first planet from the Sun and the smallest in the Solar System.<br><img src="https://t3.ftcdn.net/jpg/04/97/42/04/360_F_497420456_79Zjh28M19pWNA23O8Nh8tJjdGQwwaQf.jpg"> In English, it is named after the ancient Roman god Mercurius (Mercury), god of commerce and communication, and the messenger of the gods. Mercury is classified as a terrestrial planet, with roughly the same surface gravity as Mars. The surface of Mercury is heavily cratered, as a result of countless impact events that have accumulated over billions of years. Its largest crater, Caloris Planitia, has a diameter of 1,550 km (960 mi), which is about one-third the diameter of the planet (4,880 km or 3,030 mi). Similarly to the Earth's Moon, Mercury's surface displays an expansive rupes system generated from thrust faults and bright ray systems formed by impact event remnants.
+
+                Mercury's sidereal year (88.0 Earth days) and sidereal day (58.65 Earth days) are in a 3:2 ratio. This relationship is called spin–orbit resonance, and sidereal here means "relative to the stars". Consequently, one solar day (sunrise to sunrise) on Mercury lasts for around 176 Earth days: twice the planet's sidereal year. This means that one side of Mercury will remain in sunlight for one Mercurian year of 88 Earth days; while during the next orbit, that side will be in darkness all the time until the next sunrise after another 88 Earth days.
+                
+                Combined with its high orbital eccentricity, the planet's surface has widely varying sunlight intensity and temperature, with the equatorial regions ranging from −170 °C (−270 °F) at night to 420 °C (790 °F) during sunlight. Due to the very small axial tilt, the planet's poles are permanently shadowed. This strongly suggests that water ice could be present in the craters. Above the planet's surface is an extremely tenuous exosphere and a faint magnetic field that is strong enough to deflect solar winds. Mercury has no natural satellites.
+                
+                As of the early 2020s, many broad details of Mercury's geological history are still under investigation or pending data from space probes. Like other planets in the Solar System, Mercury was formed approximately 4.5 billion years ago. Its mantle is highly homogeneous, which suggests that Mercury had a magma ocean early in its history, like the Moon. According to current models, Mercury may have a solid silicate crust and mantle overlying a solid outer core, a deeper liquid core layer, and a solid inner core. There are many competing hypotheses about Mercury's origins and development, some of which incorporate collision with planetesimals and rock vaporization.
+                
+                Nomenclature
+                Historically, humans knew Mercury by different names depending on whether it was an evening star or a morning star. By about 350 BC, the ancient Greeks had realized the two stars were one.[20] They knew the planet as Στίλβων Stilbōn, meaning "twinkling", and Ἑρμής Hermēs, for its fleeting motion,[21] a name that is retained in modern Greek (Ερμής Ermis).[22] The Romans named the planet after the swift-footed Roman messenger god, Mercury (Latin Mercurius), whom they equated with the Greek Hermes, because it moves across the sky faster than any other planet,[20][23] though some associated the planet with Apollo instead, as detailed by Pliny the Elder.[24] The astronomical symbol for Mercury is a stylized version of Hermes' caduceus; a Christian cross was added in the 16th century:☿.[25][26]<br><h1>Physical characteristics</h1><br>Mercury is one of four terrestrial planets in the Solar System, which means it is a rocky body like Earth. It is the smallest planet in the Solar System, with an equatorial radius of 2,439.7 kilometres (1,516.0 mi).[4] Mercury is also smaller—albeit more massive—than the largest natural satellites in the Solar System, Ganymede and Titan. Mercury consists of approximately 70% metallic and 30% silicate material.[27]
+
+                Internal structure
+                
+                Mercury's internal structure and magnetic field
+                Mercury appears to have a solid silicate crust and mantle overlying a solid, metallic outer core layer, a deeper liquid core layer, and a solid inner core.[28][29] The composition of the iron-rich core remains uncertain, but it likely contains nickel, silicon and perhaps sulfur and carbon, plus trace amounts of other elements.[30] The planet's density is the second highest in the Solar System at 5.427 g/cm3, only slightly less than Earth's density of 5.515 g/cm3.[4] If the effect of gravitational compression were to be factored out from both planets, the materials of which Mercury is made would be denser than those of Earth, with an uncompressed density of 5.3 g/cm3 versus Earth's 4.4 g/cm3.[31] Mercury's density can be used to infer details of its inner structure. Although Earth's high density results appreciably from gravitational compression, particularly at the core, Mercury is much smaller and its inner regions are not as compressed. Therefore, for it to have such a high density, its core must be large and rich in iron.[32]
+                
+                The radius of Mercury's core is estimated to be 2,020 ± 30 km (1,255 ± 19 mi), based on interior models constrained to be consistent with a moment of inertia factor of 0.346±0.014.[9][33] Hence, Mercury's core occupies about 57% of its volume; for Earth this proportion is 17%. Research published in 2007 suggests that Mercury has a molten core.[34][35] The mantle-crust layer is in total 420 km (260 mi) thick.[36] Projections differ as to the size of the crust specifically; data from the Mariner 10 and MESSENGER probes suggests a thickness of 35 km (22 mi), whereas an Airy isostacy model suggests a thickness of 26 ± 11 km (16.2 ± 6.8 mi).[37][38][39] One distinctive feature of Mercury's surface is the presence of numerous narrow ridges, extending up to several hundred kilometers in length. It is thought that these were formed as Mercury's core and mantle cooled and contracted at a time when the crust had already solidified.[40][41][42]
+                
+                Mercury's core has a higher iron content than that of any other planet in the Solar System, and several theories have been proposed to explain this. The most widely accepted theory is that Mercury originally had a metal–silicate ratio similar to common chondrite meteorites, thought to be typical of the Solar System's rocky matter, and a mass approximately 2.25 times its current mass.[43] Early in the Solar System's history, Mercury may have been struck by a planetesimal of approximately 1⁄6 Mercury's mass and several thousand kilometers across.[43] The impact would have stripped away much of the original crust and mantle, leaving the core behind as a relatively major component.[43] A similar process, known as the giant impact hypothesis, has been proposed to explain the formation of Earth's Moon.[43]
+                
+                Alternatively, Mercury may have formed from the solar nebula before the Sun's energy output had stabilized. It would initially have had twice its present mass, but as the protosun contracted, temperatures near Mercury could have been between 2,500 and 3,500 K and possibly even as high as 10,000 K.[44] Much of Mercury's surface rock could have been vaporized at such temperatures, forming an atmosphere of "rock vapor" that could have been carried away by the solar wind.[44] A third hypothesis proposes that the solar nebula caused drag on the particles from which Mercury was accreting, which meant that lighter particles were lost from the accreting material and not gathered by Mercury.[45]
+                
+                Each hypothesis predicts a different surface composition, and two space missions have been tasked with making observations of this composition. The first MESSENGER, which ended in 2015, found higher-than-expected potassium and sulfur levels on the surface, suggesting that the giant impact hypothesis and vaporization of the crust and mantle did not occur because said potassium and sulfur would have been driven off by the extreme heat of these events.[46] BepiColombo, which will arrive at Mercury in 2025, will make observations to test these hypotheses.[47] The findings so far would seem to favor the third hypothesis; however, further analysis of the data is needed.[48]
+                
+                Surface geology
+                Main article: Geology of Mercury
+                Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than the surface of Mars or the Moon, both of which contain significant stretches of similar geology, such as maria and plateaus.[49] Albedo features are areas of markedly different reflectivity, which include impact craters, the resulting ejecta, and ray systems. Larger albedo features correspond to higher reflectivity plains.[50] Mercury has "wrinkle-ridges" (dorsa), Moon-like highlands, mountains (montes), plains (planitiae), escarpments (rupes), and valleys (valles).[51][52]
+                
+                
+                MASCS spectrum scan of Mercury's surface by MESSENGER
+                The planet's mantle is chemically heterogeneous, suggesting the planet went through a magma ocean phase early in its history. Crystallization of minerals and convective overturn resulted in a layered, chemically heterogeneous crust with large-scale variations in chemical composition observed on the surface. The crust is low in iron but high in sulfur, resulting from the stronger early chemically reducing conditions than is found on other terrestrial planets. The surface is dominated by iron-poor pyroxene and olivine, as represented by enstatite and forsterite, respectively, along with sodium-rich plagioclase and minerals of mixed magnesium, calcium, and iron-sulfide. The less reflective regions of the crust are high in carbon, most likely in the form of graphite.[53][54]
+                
+                Names for features on Mercury come from a variety of sources and are set according to the IAU planetary nomenclature system. Names coming from people are limited to the deceased. Craters are named for artists, musicians, painters, and authors who have made outstanding or fundamental contributions to their field. Ridges, or dorsa, are named for scientists who have contributed to the study of Mercury. Depressions or fossae are named for works of architecture. Montes are named for the word "hot" in a variety of languages. Plains or planitiae are named for Mercury in various languages. Escarpments or rupēs are named for ships of scientific expeditions. Valleys or valles are named for abandoned cities, towns, or settlements of antiquity.[55]
+                
+                Impact basins and craters
+                
+                Enhanced-color image of craters Munch (left), Sander (center), and Poe (right) amid volcanic plains (orange) near Caloris Basin
+                Mercury was heavily bombarded by comets and asteroids during and shortly following its formation 4.6 billion years ago, as well as during a possibly separate subsequent episode called the Late Heavy Bombardment that ended 3.8 billion years ago.[56] Mercury received impacts over its entire surface during this period of intense crater formation,[52] facilitated by the lack of any atmosphere to slow impactors down.[57] During this time Mercury was volcanically active; basins were filled by magma, producing smooth plains similar to the maria found on the Moon.[58][59] One of the most unusual craters is Apollodorus, or "the Spider", which hosts a series of radiating troughs extending outwards from its impact site.[60]
+                
+                Craters on Mercury range in diameter from small bowl-shaped cavities to multi-ringed impact basins hundreds of kilometers across. They appear in all states of degradation, from relatively fresh rayed craters to highly degraded crater remnants. Mercurian craters differ subtly from lunar craters in that the area blanketed by their ejecta is much smaller, a consequence of Mercury's stronger surface gravity.[61] According to International Astronomical Union rules, each new crater must be named after an artist who was famous for more than fifty years, and dead for more than three years, before the date the crater is named.[62]
+                
+                
+                Overhead view of Caloris Basin
+                
+                Perspective view of Caloris Basin – high (red); low (blue)
+                The largest known crater is Caloris Planitia, or Caloris Basin, with a diameter of 1,550 km (960 mi).[63] The impact that created the Caloris Basin was so powerful that it caused lava eruptions and left a concentric mountainous ring ~2 km (1.2 mi) tall surrounding the impact crater. The floor of the Caloris Basin is filled by a geologically distinct flat plain, broken up by ridges and fractures in a roughly polygonal pattern. It is not clear whether they were volcanic lava flows induced by the impact or a large sheet of impact melt.[61]
+                
+                At the antipode of the Caloris Basin is a large region of unusual, hilly terrain known as the "Weird Terrain". One hypothesis for its origin is that shock waves generated during the Caloris impact traveled around Mercury, converging at the basin's antipode (180 degrees away). The resulting high stresses fractured the surface.[64] Alternatively, it has been suggested that this terrain formed as a result of the convergence of ejecta at this basin's antipode.[65]
+                
+                
+                Tolstoj basin is along the bottom of this image of Mercury's limb
+                Overall, 46 impact basins have been identified.[66] A notable basin is the 400 km (250 mi)-wide, multi-ring Tolstoj Basin that has an ejecta blanket extending up to 500 km (310 mi) from its rim and a floor that has been filled by smooth plains materials. Beethoven Basin has a similar-sized ejecta blanket and a 625 km (388 mi)-diameter rim.[61] Like the Moon, the surface of Mercury has likely incurred the effects of space weathering processes, including solar wind and micrometeorite impacts.[67]
+                
+                Plains
+                There are two geologically distinct plains regions on Mercury.[61][68] Gently rolling, hilly plains in the regions between craters are Mercury's oldest visible surfaces,[61] predating the heavily cratered terrain. These inter-crater plains appear to have obliterated many earlier craters, and show a general paucity of smaller craters below about 30 km (19 mi) in diameter.[68]
+                
+                Smooth plains are widespread flat areas that fill depressions of various sizes and bear a strong resemblance to lunar maria. Unlike lunar maria, the smooth plains of Mercury have the same albedo as the older inter-crater plains. Despite a lack of unequivocally volcanic characteristics, the localization and rounded, lobate shape of these plains strongly support volcanic origins.[61] All the smooth plains of Mercury formed significantly later than the Caloris basin, as evidenced by appreciably smaller crater densities than on the Caloris ejecta blanket.[61]
+                
+                Compressional features
+                An unusual feature of Mercury's surface is the numerous compression folds, or rupes, that crisscross the plains. These exist on the Moon, but are much more prominent on Mercury.[69] As Mercury's interior cooled, it contracted and its surface began to deform, creating wrinkle ridges and lobate scarps associated with thrust faults. The scarps can reach lengths of 1,000 km (620 mi) and heights of 3 km (1.9 mi).[70] These compressional features can be seen on top of other features, such as craters and smooth plains, indicating they are more recent.[71] Mapping of the features has suggested a total shrinkage of Mercury's radius in the range of ~1–7 km (0.62–4.35 mi).[72] Most activity along the major thrust systems probably ended about 3.6–3.7 billion years ago.[73] Small-scale thrust fault scarps have been found, tens of meters in height and with lengths in the range of a few kilometers, that appear to be less than 50 million years old, indicating that compression of the interior and consequent surface geological activity continue to the present.[70][72]
+                
+                Volcanism
+                
+                Picasso crater—the large arc-shaped pit located on the eastern side of its floor is postulated to have formed when subsurface magma subsided or drained, causing the surface to collapse into the resulting void.
+                There is evidence for pyroclastic flows on Mercury from low-profile shield volcanoes.[74][75][76] Fifty-one pyroclastic deposits have been identified,[77] where 90% of them are found within impact craters.[77] A study of the degradation state of the impact craters that host pyroclastic deposits suggests that pyroclastic activity occurred on Mercury over a prolonged interval.[77]
+                
+                A "rimless depression" inside the southwest rim of the Caloris Basin consists of at least nine overlapping volcanic vents, each individually up to 8 km (5.0 mi) in diameter. It is thus a "compound volcano".[78] The vent floors are at least 1 km (0.62 mi) below their brinks and they bear a closer resemblance to volcanic craters sculpted by explosive eruptions or modified by collapse into void spaces created by magma withdrawal back down into a conduit.[78] Scientists could not quantify the age of the volcanic complex system but reported that it could be on the order of a billion years.[78]
+                
+                Surface conditions and exosphere
+                Main article: Atmosphere of Mercury
+                
+                Composite of the north pole of Mercury, where NASA confirmed the discovery of a large volume of water ice, in permanently dark craters that are found there.[79]
+                The surface temperature of Mercury ranges from 100 to 700 K (−173 to 427 °C; −280 to 800 °F).[80] It never rises above 180 K at the poles,[15] due to the absence of an atmosphere and a steep temperature gradient between the equator and the poles. At perihelion, the equatorial subsolar point is located at latitude 0°W or 180°W, and it climbs to a temperature of about 700 K. During aphelion, this occurs at 90° or 270°W and reaches only 550 K.[81] On the dark side of the planet, temperatures average 110 K.[15][82] The intensity of sunlight on Mercury's surface ranges between 4.59 and 10.61 times the solar constant (1,370 W·m−2).[83]
+                
+                Although daylight temperatures at the surface of Mercury are generally extremely high, observations strongly suggest that ice (frozen water) exists on Mercury. The floors of deep craters at the poles are never exposed to direct sunlight, and temperatures there remain below 102 K, far lower than the global average.[84] This creates a cold trap where ice can accumulate. Water ice strongly reflects radar, and observations by the 70-meter Goldstone Solar System Radar and the VLA in the early 1990s revealed that there are patches of high radar reflection near the poles.[85] Although ice was not the only possible cause of these reflective regions, astronomers thought it to be the most likely explanation.[86] The presence of water ice was confirmed using MESSENGER images of craters at the north pole.[79]
+                
+                The icy crater regions are estimated to contain about 1014–1015 kg of ice,[87] and may be covered by a layer of regolith that inhibits sublimation.[88] By comparison, the Antarctic ice sheet on Earth has a mass of about 4×1018 kg, and Mars's south polar cap contains about 1016 kg of water.[87] The origin of the ice on Mercury is not yet known, but the two most likely sources are from outgassing of water from the planet's interior and deposition by impacts of comets.[87]
+                
+                Mercury is too small and hot for its gravity to retain any significant atmosphere over long periods of time; it does have a tenuous surface-bounded exosphere[89] at a surface pressure of less than approximately 0.5 nPa (0.005 picobars).[4] It includes hydrogen, helium, oxygen, sodium, calcium, potassium, magnesium, silicon, and hydroxide, among others.[18][19] This exosphere is not stable—atoms are continuously lost and replenished from a variety of sources. Hydrogen atoms and helium atoms probably come from the solar wind, diffusing into Mercury's magnetosphere before later escaping back into space. The radioactive decay of elements within Mercury's crust is another source of helium, as well as sodium and potassium. Water vapor is present, released by a combination of processes such as comets striking its surface, sputtering creating water out of hydrogen from the solar wind and oxygen from rock, and sublimation from reservoirs of water ice in the permanently shadowed polar craters. The detection of high amounts of water-related ions like O+, OH−, and H3O+ was a surprise.[90][91] Because of the quantities of these ions that were detected in Mercury's space environment, scientists surmise that these molecules were blasted from the surface or exosphere by the solar wind.[92][93]
+                
+                Sodium, potassium, and calcium were discovered in the atmosphere during the 1980s–1990s, and are thought to result primarily from the vaporization of surface rock struck by micrometeorite impacts[94] including presently from Comet Encke.[95] In 2008, magnesium was discovered by MESSENGER.[96] Studies indicate that, at times, sodium emissions are localized at points that correspond to the planet's magnetic poles. This would indicate an interaction between the magnetosphere and the planet's surface.[97]
+                
+                According to NASA, Mercury is not a suitable planet for Earth-like life. It has a surface boundary exosphere instead of a layered atmosphere, extreme temperatures, and high solar radiation. It is unlikely that any living beings can withstand those conditions.[98] Some parts of the subsurface of Mercury may have been habitable, and perhaps life forms, albeit likely primitive microorganisms, may have existed on the planet.[99][100][101]
+                
+                Magnetic field and magnetosphere
+                Main article: Mercury's magnetic field
+                
+                Graph showing relative strength of Mercury's magnetic field
+                Despite its small size and slow 59-day-long rotation, Mercury has a significant, and apparently global, magnetic field. According to measurements taken by Mariner 10, it is about 1.1% the strength of Earth's. The magnetic-field strength at Mercury's equator is about 300 nT.[102][103] Like that of Earth, Mercury's magnetic field is dipolar[97] and nearly aligned with the planet's spin axis (10° dipolar tilt, compared to 11° for Earth).[104] Measurements from both the Mariner 10 and MESSENGER space probes have indicated that the strength and shape of the magnetic field are stable.[104]
+                
+                It is likely that this magnetic field is generated by a dynamo effect, in a manner similar to the magnetic field of Earth.[105][106] This dynamo effect would result from the circulation of the planet's iron-rich liquid core. Particularly strong tidal heating effects caused by the planet's high orbital eccentricity would serve to keep part of the core in the liquid state necessary for this dynamo effect.[107][108]
+                
+                Mercury's magnetic field is strong enough to deflect the solar wind around the planet, creating a magnetosphere. The planet's magnetosphere, though small enough to fit within Earth,[97] is strong enough to trap solar wind plasma. This contributes to the space weathering of the planet's surface.[104] Observations taken by the Mariner 10 spacecraft detected this low energy plasma in the magnetosphere of the planet's nightside. Bursts of energetic particles in the planet's magnetotail indicate a dynamic quality to the planet's magnetosphere.[97]
+                
+                During its second flyby of the planet on October 6, 2008, MESSENGER discovered that Mercury's magnetic field can be extremely "leaky". The spacecraft encountered magnetic "tornadoes"—twisted bundles of magnetic fields connecting the planetary magnetic field to interplanetary space—that were up to 800 km wide or a third of the radius of the planet. These twisted magnetic flux tubes, technically known as flux transfer events, form open windows in the planet's magnetic shield through which the solar wind may enter and directly impact Mercury's surface via magnetic reconnection.[109] This also occurs in Earth's magnetic field. The MESSENGER observations showed the reconnection rate was ten times higher at Mercury, but its proximity to the Sun only accounts for about a third of the reconnection rate observed by MESSENGER.[109]Mercury is one of four terrestrial planets in the Solar System, which means it is a rocky body like Earth. It is the smallest planet in the Solar System, with an equatorial radius of 2,439.7 kilometres (1,516.0 mi).[4] Mercury is also smaller—albeit more massive—than the largest natural satellites in the Solar System, Ganymede and Titan. Mercury consists of approximately 70% metallic and 30% silicate material.[27]
+
+                Internal structure
+                
+                Mercury's internal structure and magnetic field
+                Mercury appears to have a solid silicate crust and mantle overlying a solid, metallic outer core layer, a deeper liquid core layer, and a solid inner core.[28][29] The composition of the iron-rich core remains uncertain, but it likely contains nickel, silicon and perhaps sulfur and carbon, plus trace amounts of other elements.[30] The planet's density is the second highest in the Solar System at 5.427 g/cm3, only slightly less than Earth's density of 5.515 g/cm3.[4] If the effect of gravitational compression were to be factored out from both planets, the materials of which Mercury is made would be denser than those of Earth, with an uncompressed density of 5.3 g/cm3 versus Earth's 4.4 g/cm3.[31] Mercury's density can be used to infer details of its inner structure. Although Earth's high density results appreciably from gravitational compression, particularly at the core, Mercury is much smaller and its inner regions are not as compressed. Therefore, for it to have such a high density, its core must be large and rich in iron.[32]
+                
+                The radius of Mercury's core is estimated to be 2,020 ± 30 km (1,255 ± 19 mi), based on interior models constrained to be consistent with a moment of inertia factor of 0.346±0.014.[9][33] Hence, Mercury's core occupies about 57% of its volume; for Earth this proportion is 17%. Research published in 2007 suggests that Mercury has a molten core.[34][35] The mantle-crust layer is in total 420 km (260 mi) thick.[36] Projections differ as to the size of the crust specifically; data from the Mariner 10 and MESSENGER probes suggests a thickness of 35 km (22 mi), whereas an Airy isostacy model suggests a thickness of 26 ± 11 km (16.2 ± 6.8 mi).[37][38][39] One distinctive feature of Mercury's surface is the presence of numerous narrow ridges, extending up to several hundred kilometers in length. It is thought that these were formed as Mercury's core and mantle cooled and contracted at a time when the crust had already solidified.[40][41][42]
+                
+                Mercury's core has a higher iron content than that of any other planet in the Solar System, and several theories have been proposed to explain this. The most widely accepted theory is that Mercury originally had a metal–silicate ratio similar to common chondrite meteorites, thought to be typical of the Solar System's rocky matter, and a mass approximately 2.25 times its current mass.[43] Early in the Solar System's history, Mercury may have been struck by a planetesimal of approximately 1⁄6 Mercury's mass and several thousand kilometers across.[43] The impact would have stripped away much of the original crust and mantle, leaving the core behind as a relatively major component.[43] A similar process, known as the giant impact hypothesis, has been proposed to explain the formation of Earth's Moon.[43]
+                
+                Alternatively, Mercury may have formed from the solar nebula before the Sun's energy output had stabilized. It would initially have had twice its present mass, but as the protosun contracted, temperatures near Mercury could have been between 2,500 and 3,500 K and possibly even as high as 10,000 K.[44] Much of Mercury's surface rock could have been vaporized at such temperatures, forming an atmosphere of "rock vapor" that could have been carried away by the solar wind.[44] A third hypothesis proposes that the solar nebula caused drag on the particles from which Mercury was accreting, which meant that lighter particles were lost from the accreting material and not gathered by Mercury.[45]
+                
+                Each hypothesis predicts a different surface composition, and two space missions have been tasked with making observations of this composition. The first MESSENGER, which ended in 2015, found higher-than-expected potassium and sulfur levels on the surface, suggesting that the giant impact hypothesis and vaporization of the crust and mantle did not occur because said potassium and sulfur would have been driven off by the extreme heat of these events.[46] BepiColombo, which will arrive at Mercury in 2025, will make observations to test these hypotheses.[47] The findings so far would seem to favor the third hypothesis; however, further analysis of the data is needed.[48]
+                
+                Surface geology
+                Main article: Geology of Mercury
+                Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than the surface of Mars or the Moon, both of which contain significant stretches of similar geology, such as maria and plateaus.[49] Albedo features are areas of markedly different reflectivity, which include impact craters, the resulting ejecta, and ray systems. Larger albedo features correspond to higher reflectivity plains.[50] Mercury has "wrinkle-ridges" (dorsa), Moon-like highlands, mountains (montes), plains (planitiae), escarpments (rupes), and valleys (valles).[51][52]
+                
+                
+                MASCS spectrum scan of Mercury's surface by MESSENGER
+                The planet's mantle is chemically heterogeneous, suggesting the planet went through a magma ocean phase early in its history. Crystallization of minerals and convective overturn resulted in a layered, chemically heterogeneous crust with large-scale variations in chemical composition observed on the surface. The crust is low in iron but high in sulfur, resulting from the stronger early chemically reducing conditions than is found on other terrestrial planets. The surface is dominated by iron-poor pyroxene and olivine, as represented by enstatite and forsterite, respectively, along with sodium-rich plagioclase and minerals of mixed magnesium, calcium, and iron-sulfide. The less reflective regions of the crust are high in carbon, most likely in the form of graphite.[53][54]
+                
+                Names for features on Mercury come from a variety of sources and are set according to the IAU planetary nomenclature system. Names coming from people are limited to the deceased. Craters are named for artists, musicians, painters, and authors who have made outstanding or fundamental contributions to their field. Ridges, or dorsa, are named for scientists who have contributed to the study of Mercury. Depressions or fossae are named for works of architecture. Montes are named for the word "hot" in a variety of languages. Plains or planitiae are named for Mercury in various languages. Escarpments or rupēs are named for ships of scientific expeditions. Valleys or valles are named for abandoned cities, towns, or settlements of antiquity.[55]
+                
+                Impact basins and craters
+                
+                Enhanced-color image of craters Munch (left), Sander (center), and Poe (right) amid volcanic plains (orange) near Caloris Basin
+                Mercury was heavily bombarded by comets and asteroids during and shortly following its formation 4.6 billion years ago, as well as during a possibly separate subsequent episode called the Late Heavy Bombardment that ended 3.8 billion years ago.[56] Mercury received impacts over its entire surface during this period of intense crater formation,[52] facilitated by the lack of any atmosphere to slow impactors down.[57] During this time Mercury was volcanically active; basins were filled by magma, producing smooth plains similar to the maria found on the Moon.[58][59] One of the most unusual craters is Apollodorus, or "the Spider", which hosts a series of radiating troughs extending outwards from its impact site.[60]
+                
+                Craters on Mercury range in diameter from small bowl-shaped cavities to multi-ringed impact basins hundreds of kilometers across. They appear in all states of degradation, from relatively fresh rayed craters to highly degraded crater remnants. Mercurian craters differ subtly from lunar craters in that the area blanketed by their ejecta is much smaller, a consequence of Mercury's stronger surface gravity.[61] According to International Astronomical Union rules, each new crater must be named after an artist who was famous for more than fifty years, and dead for more than three years, before the date the crater is named.[62]
+                
+                
+                Overhead view of Caloris Basin
+                
+                Perspective view of Caloris Basin – high (red); low (blue)
+                The largest known crater is Caloris Planitia, or Caloris Basin, with a diameter of 1,550 km (960 mi).[63] The impact that created the Caloris Basin was so powerful that it caused lava eruptions and left a concentric mountainous ring ~2 km (1.2 mi) tall surrounding the impact crater. The floor of the Caloris Basin is filled by a geologically distinct flat plain, broken up by ridges and fractures in a roughly polygonal pattern. It is not clear whether they were volcanic lava flows induced by the impact or a large sheet of impact melt.[61]
+                
+                At the antipode of the Caloris Basin is a large region of unusual, hilly terrain known as the "Weird Terrain". One hypothesis for its origin is that shock waves generated during the Caloris impact traveled around Mercury, converging at the basin's antipode (180 degrees away). The resulting high stresses fractured the surface.[64] Alternatively, it has been suggested that this terrain formed as a result of the convergence of ejecta at this basin's antipode.[65]
+                
+                
+                Tolstoj basin is along the bottom of this image of Mercury's limb
+                Overall, 46 impact basins have been identified.[66] A notable basin is the 400 km (250 mi)-wide, multi-ring Tolstoj Basin that has an ejecta blanket extending up to 500 km (310 mi) from its rim and a floor that has been filled by smooth plains materials. Beethoven Basin has a similar-sized ejecta blanket and a 625 km (388 mi)-diameter rim.[61] Like the Moon, the surface of Mercury has likely incurred the effects of space weathering processes, including solar wind and micrometeorite impacts.[67]
+                
+                Plains
+                There are two geologically distinct plains regions on Mercury.[61][68] Gently rolling, hilly plains in the regions between craters are Mercury's oldest visible surfaces,[61] predating the heavily cratered terrain. These inter-crater plains appear to have obliterated many earlier craters, and show a general paucity of smaller craters below about 30 km (19 mi) in diameter.[68]
+                
+                Smooth plains are widespread flat areas that fill depressions of various sizes and bear a strong resemblance to lunar maria. Unlike lunar maria, the smooth plains of Mercury have the same albedo as the older inter-crater plains. Despite a lack of unequivocally volcanic characteristics, the localization and rounded, lobate shape of these plains strongly support volcanic origins.[61] All the smooth plains of Mercury formed significantly later than the Caloris basin, as evidenced by appreciably smaller crater densities than on the Caloris ejecta blanket.[61]
+                
+                Compressional features
+                An unusual feature of Mercury's surface is the numerous compression folds, or rupes, that crisscross the plains. These exist on the Moon, but are much more prominent on Mercury.[69] As Mercury's interior cooled, it contracted and its surface began to deform, creating wrinkle ridges and lobate scarps associated with thrust faults. The scarps can reach lengths of 1,000 km (620 mi) and heights of 3 km (1.9 mi).[70] These compressional features can be seen on top of other features, such as craters and smooth plains, indicating they are more recent.[71] Mapping of the features has suggested a total shrinkage of Mercury's radius in the range of ~1–7 km (0.62–4.35 mi).[72] Most activity along the major thrust systems probably ended about 3.6–3.7 billion years ago.[73] Small-scale thrust fault scarps have been found, tens of meters in height and with lengths in the range of a few kilometers, that appear to be less than 50 million years old, indicating that compression of the interior and consequent surface geological activity continue to the present.[70][72]
+                
+                Volcanism
+                
+                Picasso crater—the large arc-shaped pit located on the eastern side of its floor is postulated to have formed when subsurface magma subsided or drained, causing the surface to collapse into the resulting void.
+                There is evidence for pyroclastic flows on Mercury from low-profile shield volcanoes.[74][75][76] Fifty-one pyroclastic deposits have been identified,[77] where 90% of them are found within impact craters.[77] A study of the degradation state of the impact craters that host pyroclastic deposits suggests that pyroclastic activity occurred on Mercury over a prolonged interval.[77]
+                
+                A "rimless depression" inside the southwest rim of the Caloris Basin consists of at least nine overlapping volcanic vents, each individually up to 8 km (5.0 mi) in diameter. It is thus a "compound volcano".[78] The vent floors are at least 1 km (0.62 mi) below their brinks and they bear a closer resemblance to volcanic craters sculpted by explosive eruptions or modified by collapse into void spaces created by magma withdrawal back down into a conduit.[78] Scientists could not quantify the age of the volcanic complex system but reported that it could be on the order of a billion years.[78]
+                
+                Surface conditions and exosphere
+                Main article: Atmosphere of Mercury
+                
+                Composite of the north pole of Mercury, where NASA confirmed the discovery of a large volume of water ice, in permanently dark craters that are found there.[79]
+                The surface temperature of Mercury ranges from 100 to 700 K (−173 to 427 °C; −280 to 800 °F).[80] It never rises above 180 K at the poles,[15] due to the absence of an atmosphere and a steep temperature gradient between the equator and the poles. At perihelion, the equatorial subsolar point is located at latitude 0°W or 180°W, and it climbs to a temperature of about 700 K. During aphelion, this occurs at 90° or 270°W and reaches only 550 K.[81] On the dark side of the planet, temperatures average 110 K.[15][82] The intensity of sunlight on Mercury's surface ranges between 4.59 and 10.61 times the solar constant (1,370 W·m−2).[83]
+                
+                Although daylight temperatures at the surface of Mercury are generally extremely high, observations strongly suggest that ice (frozen water) exists on Mercury. The floors of deep craters at the poles are never exposed to direct sunlight, and temperatures there remain below 102 K, far lower than the global average.[84] This creates a cold trap where ice can accumulate. Water ice strongly reflects radar, and observations by the 70-meter Goldstone Solar System Radar and the VLA in the early 1990s revealed that there are patches of high radar reflection near the poles.[85] Although ice was not the only possible cause of these reflective regions, astronomers thought it to be the most likely explanation.[86] The presence of water ice was confirmed using MESSENGER images of craters at the north pole.[79]
+                
+                The icy crater regions are estimated to contain about 1014–1015 kg of ice,[87] and may be covered by a layer of regolith that inhibits sublimation.[88] By comparison, the Antarctic ice sheet on Earth has a mass of about 4×1018 kg, and Mars's south polar cap contains about 1016 kg of water.[87] The origin of the ice on Mercury is not yet known, but the two most likely sources are from outgassing of water from the planet's interior and deposition by impacts of comets.[87]
+                
+                Mercury is too small and hot for its gravity to retain any significant atmosphere over long periods of time; it does have a tenuous surface-bounded exosphere[89] at a surface pressure of less than approximately 0.5 nPa (0.005 picobars).[4] It includes hydrogen, helium, oxygen, sodium, calcium, potassium, magnesium, silicon, and hydroxide, among others.[18][19] This exosphere is not stable—atoms are continuously lost and replenished from a variety of sources. Hydrogen atoms and helium atoms probably come from the solar wind, diffusing into Mercury's magnetosphere before later escaping back into space. The radioactive decay of elements within Mercury's crust is another source of helium, as well as sodium and potassium. Water vapor is present, released by a combination of processes such as comets striking its surface, sputtering creating water out of hydrogen from the solar wind and oxygen from rock, and sublimation from reservoirs of water ice in the permanently shadowed polar craters. The detection of high amounts of water-related ions like O+, OH−, and H3O+ was a surprise.[90][91] Because of the quantities of these ions that were detected in Mercury's space environment, scientists surmise that these molecules were blasted from the surface or exosphere by the solar wind.[92][93]
+                
+                Sodium, potassium, and calcium were discovered in the atmosphere during the 1980s–1990s, and are thought to result primarily from the vaporization of surface rock struck by micrometeorite impacts[94] including presently from Comet Encke.[95] In 2008, magnesium was discovered by MESSENGER.[96] Studies indicate that, at times, sodium emissions are localized at points that correspond to the planet's magnetic poles. This would indicate an interaction between the magnetosphere and the planet's surface.[97]
+                
+                According to NASA, Mercury is not a suitable planet for Earth-like life. It has a surface boundary exosphere instead of a layered atmosphere, extreme temperatures, and high solar radiation. It is unlikely that any living beings can withstand those conditions.[98] Some parts of the subsurface of Mercury may have been habitable, and perhaps life forms, albeit likely primitive microorganisms, may have existed on the planet.[99][100][101]
+                
+                Magnetic field and magnetosphere<br>
+                <h1>Main article:</h1><h2>Mercury's magnetic field</h2><br>
+                 
+                
+                Graph showing relative strength of Mercury's magnetic field
+                Despite its small size and slow 59-day-long rotation, Mercury has a significant, and apparently global, magnetic field. According to measurements taken by Mariner 10, it is about 1.1% the strength of Earth's. The magnetic-field strength at Mercury's equator is about 300 nT.[102][103] Like that of Earth, Mercury's magnetic field is dipolar[97] and nearly aligned with the planet's spin axis (10° dipolar tilt, compared to 11° for Earth).[104] Measurements from both the Mariner 10 and MESSENGER space probes have indicated that the strength and shape of the magnetic field are stable.[104]
+                
+                It is likely that this magnetic field is generated by a dynamo effect, in a manner similar to the magnetic field of Earth.[105][106] This dynamo effect would result from the circulation of the planet's iron-rich liquid core. Particularly strong tidal heating effects caused by the planet's high orbital eccentricity would serve to keep part of the core in the liquid state necessary for this dynamo effect.[107][108]
+                
+                Mercury's magnetic field is strong enough to deflect the solar wind around the planet, creating a magnetosphere. The planet's magnetosphere, though small enough to fit within Earth,[97] is strong enough to trap solar wind plasma. This contributes to the space weathering of the planet's surface.[104] Observations taken by the Mariner 10 spacecraft detected this low energy plasma in the magnetosphere of the planet's nightside. Bursts of energetic particles in the planet's magnetotail indicate a dynamic quality to the planet's magnetosphere.[97]
+                
+                During its second flyby of the planet on October 6, 2008, MESSENGER discovered that Mercury's magnetic field can be extremely "leaky". The spacecraft encountered magnetic "tornadoes"—twisted bundles of magnetic fields connecting the planetary magnetic field to interplanetary space—that were up to 800 km wide or a third of the radius of the planet. These twisted magnetic flux tubes, technically known as flux transfer events, form open windows in the planet's magnetic shield through which the solar wind may enter and directly impact Mercury's surface via magnetic reconnection.[109] This also occurs in Earth's magnetic field. The MESSENGER observations showed the reconnection rate was ten times higher at Mercury, but its proximity to the Sun only accounts for about a third of the reconnection rate observed by MESSENGER.[109]</p>
+        </div>
+        <div id="venus" class="planet-details">
+            <h2>Venus</h2>
+            <p>Venus is the second planet from the Sun and is known for its thick, toxic atmosphere.<br>Venus is the second planet from the Sun. It is a terrestrial planet and is the closest in mass and size to its orbital neighbour Earth. <br><img src="https://i.pinimg.com/736x/f2/db/6e/f2db6efc3fd86f3172c0ade116773c85.jpg">Venus has by far the densest atmosphere of the terrestrial planets, composed mostly of carbon dioxide with a thick, global sulfuric acid cloud cover. At the surface it has a mean temperature of 737 K (464 °C; 867 °F) and a pressure 92 times that of Earth's at sea level. These extreme conditions compress carbon dioxide into a supercritical state at Venus's surface.
+
+                Internally, Venus has a core, mantle, and crust. Venus lacks an internal dynamo, and its weakly induced magnetosphere is caused by atmospheric interactions with the solar wind. Internal heat escapes through active volcanism,[21][22] resulting in resurfacing instead of plate tectonics. Venus is one of two planets in the Solar System, the other being Mercury, that have no moons.[23] Conditions perhaps favourable for life on Venus have been identified at its cloud layers. Venus may have had liquid surface water early in its history with a habitable environment,[24][25] before a runaway greenhouse effect evaporated any water and turned Venus into its present state.[26][27][28]
+                
+                The rotation of Venus has been slowed and turned against its orbital direction (retrograde) by the currents and drag of its atmosphere.[29] It takes 224.7 Earth days for Venus to complete an orbit around the Sun, and a Venusian solar year is just under two Venusian days long. The orbits of Venus and Earth are the closest between any two Solar System planets, approaching each other in synodic periods of 1.6 years. Venus and Earth have the lowest difference in gravitational potential of any pair of Solar System planets. This allows Venus to be the most accessible destination and a useful gravity assist waypoint for interplanetary flights from Earth.
+                
+                Venus figures prominently in human culture and in the history of astronomy. Orbiting inferiorly (inside of Earth's orbit), it always appears close to the Sun in Earth's sky, as either a "morning star" or an "evening star". While this is also true for Mercury, Venus appears more prominent, since it is the third brightest object in Earth's sky after the Moon and the Sun.[30][31] In 1961, Venus became the target of the first interplanetary flight, Venera 1, followed by many essential interplanetary firsts, such as the first soft landing on another planet by Venera 7 in 1970. These probes demonstrated the extreme surface conditions, an insight that has informed predictions about global warming on Earth.[32] This finding ended the theories and then<br><h1>Physical characteristics</h1><br>Venus is one of the four terrestrial planets in the Solar System, meaning that it is a rocky body like Earth. It is similar to Earth in size and mass and is often described as Earth's "sister" or "twin".[33] Venus is close to spherical due to its slow rotation.[34] Venus has a diameter of 12,103.6 km (7,520.8 mi)—only 638.4 km (396.7 mi) less than Earth's—and its mass is 81.5% of Earth's, making it the third-smallest planet in the Solar System. Conditions on the Venusian surface differ radically from those on Earth because its dense atmosphere is 96.5% carbon dioxide, with most of the remaining 3.5% being nitrogen.[35] The surface pressure is 9.3 megapascals (93 bars), and the average surface temperature is 737 K (464 °C; 867 °F), above the critical points of both major constituents and making the surface atmosphere a supercritical fluid out of mainly supercritical carbon dioxide and some supercritical nitrogen.
+
+                Geography
+                Main articles: Geology of Venus, Geodynamics of Venus, Mapping of Venus, and Surface features of Venus
+                
+                Color-coded elevation map, showing the elevated terrae "continents" in yellow and minor features of Venus.
+                The Venusian surface was a subject of speculation until some of its secrets were revealed by planetary science in the 20th century. Venera landers in 1975 and 1982 returned images of a surface covered in sediment and relatively angular rocks.[36] The surface was mapped in detail by Magellan in 1990–91. The ground shows evidence of extensive volcanism, and the sulphur in the atmosphere may indicate that there have been recent eruptions.[37][38]
+                
+                About 80% of the Venusian surface is covered by smooth, volcanic plains, consisting of 70% plains with wrinkle ridges and 10% smooth or lobate plains.[39] Two highland "continents" make up the rest of its surface area, one lying in the planet's northern hemisphere and the other just south of the equator. The northern continent is called Ishtar Terra after Ishtar, the Babylonian goddess of love, and is about the size of Australia. Maxwell Montes, the highest mountain on Venus, lies on Ishtar Terra. Its peak is 11 km (7 mi) above the Venusian average surface elevation.[40] The southern continent is called Aphrodite Terra, after the Greek mythological goddess of love, and is the larger of the two highland regions at roughly the size of South America. A network of fractures and faults covers much of this area.[41]
+                
+                There is recent evidence of lava flow on Venus (2024),[42] such as flows on Sif Mons, a shield volcano, and on Niobe Planitia, a flat plain.[43] There are visible calderas. The planet has few impact craters, demonstrating that the surface is relatively young, at 300–600 million years old.[44][45] Venus has some unique surface features in addition to the impact craters, mountains, and valleys commonly found on rocky planets. Among these are flat-topped volcanic features called "farra", which look somewhat like pancakes and range in size from 20 to 50 km (12 to 31 mi) across, and from 100 to 1,000 m (330 to 3,280 ft) high; radial, star-like fracture systems called "novae"; features with both radial and concentric fractures resembling spider webs, known as "arachnoids"; and "coronae", circular rings of fractures sometimes surrounded by a depression. These features are volcanic in origin.[46]
+                
+                
+                Surface panorama taken by Venera 13
+                Most Venusian surface features are named after historical and mythological women.[47] Exceptions are Maxwell Montes, named after James Clerk Maxwell, and highland regions Alpha Regio, Beta Regio, and Ovda Regio. The last three features were named before the current system was adopted by the International Astronomical Union, the body which oversees planetary nomenclature.[48]
+                
+                The longitude of physical features on Venus is expressed relative to its prime meridian. The original prime meridian passed through the radar-bright spot at the centre of the oval feature Eve, located south of Alpha Regio.[49] After the Venera missions were completed, the prime meridian was redefined to pass through the central peak in the crater Ariadne on Sedna Planitia.[50][51]
+                
+                The stratigraphically oldest tessera terrains have consistently lower thermal emissivity than the surrounding basaltic plains measured by Venus Express and Magellan, indicating a different, possibly a more felsic, mineral assemblage.[27][52] The mechanism to generate a large amount of felsic crust usually requires the presence of water ocean and plate tectonics, implying that habitable condition had existed on early Venus with large bodies of water at some point.[53] However, the nature of tessera terrains is far from certain.[54]
+                
+                Studies reported on 26 October 2023 suggest for the first time that Venus may have had plate tectonics during ancient times and, as a result, may have had a more habitable environment, possibly one capable of sustaining life.[24][25] Venus has gained interest as a case for research into the development of Earth-like planets and their habitability.
+                
+                Volcanism<br>
+               <h1> Main article:</h1><h2>Volcanism on Venus</h2> <br>
+                
+                Radar mosaic of two 65 km (40 mi) wide (and less than 1 km (0.62 mi) high) pancake domes in Venus's Eistla region
+                Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.[46]: 154  More than 85,000 volcanoes on Venus were identified and mapped.[55][56] This is not because Venus is more volcanically active than Earth, but because its crust is older and is not subject to the same erosion process. Earth's oceanic crust is continually recycled by subduction at the boundaries of tectonic plates, and has an average age of about 100 million years,[57] whereas the Venusian surface is estimated to be 300–600 million years old.[44][46]
+                
+                Several lines of evidence point to ongoing volcanic activity on Venus. Sulfur dioxide concentrations in the upper atmosphere dropped by a factor of 10 between 1978 and 1986, jumped in 2006, and again declined 10-fold.[58] This may mean that levels had been boosted several times by large volcanic eruptions.[59][60] It has been suggested that Venusian lightning (discussed below) could originate from volcanic activity (i.e. volcanic lightning). In January 2020, astronomers reported evidence that suggests that Venus is currently volcanically active, specifically the detection of olivine, a volcanic product that would weather quickly on the planet's surface.[61][62]
+                
+                This massive volcanic activity is fuelled by a superheated interior, which models say could be explained by energetic collisions from when the planet was young. Impacts would have had significantly higher velocity than on Earth, both because Venus's orbit is faster due to its closer proximity to the Sun and because objects would require higher orbital eccentricities to collide with the planet.[63]
+                
+                In 2008 and 2009, the first direct evidence for ongoing volcanism was observed by Venus Express, in the form of four transient localized infrared hot spots within the rift zone Ganis Chasma,[64][note 1] near the shield volcano Maat Mons. Three of the spots were observed in more than one successive orbit. These spots are thought to represent lava freshly released by volcanic eruptions.[65][66] The actual temperatures are not known, because the size of the hot spots could not be measured, but are likely to have been in the 800–1,100 K (527–827 °C; 980–1,520 °F) range, relative to a normal temperature of 740 K (467 °C; 872 °F).[67] In 2023, scientists reexamined topographical images of the Maat Mons region taken by the Magellan orbiter. Using computer simulations, they determined that the topography had changed during an 8-month interval, and concluded that active volcanism was the cause.[68]
+                
+                Craters
+                The plains of Venus
+                Impact craters on the surface of Venus (false-colour image reconstructed from radar data)
+                Almost a thousand impact craters on Venus are evenly distributed across its surface. On other cratered bodies, such as Earth and the Moon, craters show a range of states of degradation. On the Moon, degradation is caused by subsequent impacts, whereas on Earth it is caused by wind and rain erosion. On Venus, about 85% of the craters are in pristine condition. The number of craters, together with their well-preserved condition, indicates the planet underwent a global resurfacing event 300–600 million years ago,[44][45] followed by a decay in volcanism.[69] Whereas Earth's crust is in continuous motion, Venus is thought to be unable to sustain such a process. Without plate tectonics to dissipate heat from its mantle, Venus instead undergoes a cyclical process in which mantle temperatures rise until they reach a critical level that weakens the crust. Then, over a period of about 100 million years, subduction occurs on an enormous scale, completely recycling the crust.[46]
+                
+                Venusian craters range from 3 to 280 km (2 to 174 mi) in diameter. No craters are smaller than 3 km, because of the effects of the dense atmosphere on incoming objects. Objects with less than a certain kinetic energy are slowed so much by the atmosphere that they do not create an impact crater.[70] Incoming projectiles less than 50 m (160 ft) in diameter will fragment and burn up in the atmosphere before reaching the ground.[71]
+              <br>  <h1> Internal structure</h1>
+               
+                Spherical cross-section of Venus showing the different layers
+                The differentiated structure of Venus
+                Without data from reflection seismology or knowledge of its moment of inertia, little direct information is available about the internal structure and geochemistry of Venus.[72] The similarity in size and density between Venus and Earth suggests that they share a similar internal structure: a core, mantle, and crust. Like that of Earth, the Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate,[73] although a completely solid core cannot be ruled out.[74] The slightly smaller size of Venus means pressures are 24% lower in its deep interior than Earth's.[75] The predicted values for the moment of inertia based on planetary models suggest a core radius of 2,900–3,450 km.[74] This is in line with the first observation-based estimate of 3,500 km.[76]
+                
+                The principal difference between the two planets is the lack of evidence for plate tectonics on Venus, possibly because its crust is too strong to subduct without water to make it less viscous. This results in reduced heat loss from the planet, preventing it from cooling and providing a likely explanation for its lack of an internally generated magnetic field.[77] Instead, Venus may lose its internal heat in periodic major resurfacing events.[44]
+                
+                Magnetic field and core
+                In 1967, Venera 4 found Venus's magnetic field to be much weaker than that of Earth. This magnetic field is induced by an interaction between the ionosphere and the solar wind,[78][79][page needed] rather than by an internal dynamo as in the Earth's core. Venus's small induced magnetosphere provides negligible protection to the atmosphere against solar and cosmic radiation.
+                
+                The lack of an intrinsic magnetic field on Venus was surprising, given that it is similar to Earth in size and was expected to contain a dynamo at its core. A dynamo requires three things: a conducting liquid, rotation, and convection. The core is thought to be electrically conductive and, although its rotation is often thought to be too slow, simulations show it is adequate to produce a dynamo.[80][81] This implies that the dynamo is missing because of a lack of convection in Venus's core. On Earth, convection occurs in the liquid outer layer of the core because the bottom of the liquid layer is much higher in temperature than the top. On Venus, a global resurfacing event may have shut down plate tectonics and led to a reduced heat flux through the crust. This insulating effect would cause the mantle temperature to increase, thereby reducing the heat flux out of the core. As a result, no internal geodynamo is available to drive a magnetic field. Instead, the heat from the core is reheating the crust.[82]
+                
+                One possibility is that Venus has no solid inner core,[83] or that its core is not cooling, so that the entire liquid part of the core is at approximately the same temperature. Another possibility is that its core has already been completely solidified. The state of the core is highly dependent on the concentration of sulphur, which is unknown at present.[82]
+                
+                Another possibility is that the absence of a late, large impact on Venus (contra the Earth's "Moon-forming" impact) left the core of Venus stratified from the core's incremental formation, and without the forces to initiate/sustain convection, and thus a "geodynamo".[84]
+                
+                The weak magnetosphere around Venus means that the solar wind is interacting directly with its outer atmosphere. Here, ions of hydrogen and oxygen are being created by the dissociation of water molecules from ultraviolet radiation. The solar wind then supplies energy that gives some of these ions sufficient velocity to escape Venus's gravity field. This erosion process results in a steady loss of low-mass hydrogen, helium, and oxygen ions, whereas higher-mass molecules, such as carbon dioxide, are more likely to be retained. Atmospheric erosion by the solar wind could have led to the loss of most of Venus's water during the first billion years after it formed.[85] However, the planet may have retained a dynamo for its first 2–3 billion years, so the water loss may have occurred more recently.[86] The erosion has increased the ratio of higher-mass deuterium to lower-mass hydrogen in the atmosphere 100 times compared to the rest of the solar system.[87]</p>
+        </div>
+        <div id="earth" class="planet-details">
+            <h2>Earth</h2>
+            <p>Earth is the third planet from the Sun and the only known planet to support life.<br>Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being an ocean world, the only one in the Solar System sustaining liquid surface water.<br>   <img src="https://i.pinimg.com/736x/93/37/88/933788e18455fcdaaa7593d2a1a45ec2.jpg"> Almost all of Earth's water is contained in its global ocean, covering 70.8% of Earth's crust. The remaining 29.2% of Earth's crust is land, most of which is located in the form of continental landmasses within Earth's land hemisphere. Most of Earth's land is at least somewhat humid and covered by vegetation, while large sheets of ice at Earth's polar deserts retain more water than Earth's groundwater, lakes, rivers, and atmospheric water combined. Earth's crust consists of slowly moving tectonic plates, which interact to produce mountain ranges, volcanoes, and earthquakes. Earth has a liquid outer core that generates a magnetosphere capable of deflecting most of the destructive solar winds and cosmic radiation.
+
+                Earth has a dynamic atmosphere, which sustains Earth's surface conditions and protects it from most meteoroids and UV-light at entry. It has a composition of primarily nitrogen and oxygen. Water vapor is widely present in the atmosphere, forming clouds that cover most of the planet. The water vapor acts as a greenhouse gas and, together with other greenhouse gases in the atmosphere, particularly carbon dioxide (CO2), creates the conditions for both liquid surface water and water vapor to persist via the capturing of energy from the Sun's light. This process maintains the current average surface temperature of 14.76 °C (58.57 °F), at which water is liquid under normal atmospheric pressure. Differences in the amount of captured energy between geographic regions (as with the equatorial region receiving more sunlight than the polar regions) drive atmospheric and ocean currents, producing a global climate system with different climate regions, and a range of weather phenomena such as precipitation, allowing components such as nitrogen to cycle.
+                
+                Earth is rounded into an ellipsoid with a circumference of about 40,000 km. It is the densest planet in the Solar System. Of the four rocky planets, it is the largest and most massive. Earth is about eight light-minutes away from the Sun and orbits it, taking a year (about 365.25 days) to complete one revolution. Earth rotates around its own axis in slightly less than a day (in about 23 hours and 56 minutes). Earth's axis of rotation is tilted with respect to the perpendicular to its orbital plane around the Sun, producing seasons. Earth is orbited by one permanent natural satellite, the Moon, which orbits Earth at 384,400 km (1.28 light seconds) and is roughly a quarter as wide as Earth. The Moon's gravity helps stabilize Earth's axis, causes tides and gradually slows Earth's rotation. Tidal locking has made the Moon always face Earth with the same side.
+                
+                Earth, like most other bodies in the Solar System, formed 4.5 billion years ago from gas and dust in the early Solar System. During the first billion years of Earth's history, the ocean formed and then life developed within it. Life spread globally and has been altering Earth's atmosphere and surface, leading to the Great Oxidation Event two billion years ago. Humans emerged 300,000 years ago in Africa and have spread across every continent on Earth. Humans depend on Earth's biosphere and natural resources for their survival, but have increasingly impacted the planet's environment. Humanity's current impact on Earth's climate and biosphere is unsustainable, threatening the livelihood of humans and many other forms of life, and causing widespread extinctions.[23]<br><h1>Physical characteristics</h1><br>Size and shape
+                Main article: Figure of the Earth
+                Further information: Earth radius, Earth's circumference, Earth curvature, and Geomorphology
+                See also: List of highest mountains on Earth
+                
+                Earth's western hemisphere showing topography relative to Earth's center instead of to mean sea level, as in common topographic maps
+                Earth has a rounded shape, through hydrostatic equilibrium,[85] with an average diameter of 12,742 kilometres (7,918 mi), making it the fifth largest planetary sized and largest terrestrial object of the Solar System.[86]
+                
+                Due to Earth's rotation it has the shape of an ellipsoid, bulging at its equator; its diameter is 43 kilometres (27 mi) longer there than at its poles.[87][88] Earth's shape also has local topographic variations; the largest local variations, like the Mariana Trench (10,925 metres or 35,843 feet below local sea level),[89] shortens Earth's average radius by 0.17% and Mount Everest (8,848 metres or 29,029 feet above local sea level) lengthens it by 0.14%.[n 6][91] Since Earth's surface is farthest out from its center of mass at its equatorial bulge, the summit of the volcano Chimborazo in Ecuador (6,384.4 km or 3,967.1 mi) is its farthest point out.[92][93] Parallel to the rigid land topography the ocean exhibits a more dynamic topography.[94]
+                
+                To measure the local variation of Earth's topography, geodesy employs an idealized Earth producing a geoid shape. Such a shape is gained if the ocean is idealized, covering Earth completely and without any perturbations such as tides and winds. The result is a smooth but irregular geoid surface, providing a mean sea level (MSL) as a reference level for topographic measurements.[95]
+                
+                Surface
+                Further information: Planetary surface, Land cover, Land, Pedosphere, Ocean, Sea, Cryosphere, and Peplosphere
+                
+                A composite image of Earth, with its different types of surface discernible: Earth's surface dominating Ocean (blue), Africa with lush (green) to dry (brown) land and Earth's polar ice in the form of Antarctic sea ice (grey) covering the Antarctic or Southern Ocean and the Antarctic ice sheet (white) covering Antarctica.
+               <br> <h1>Relief of Earth's crust</h1><br>
+                
+                Earth's surface is the boundary between the atmosphere, and the solid Earth and oceans. Defined in this way, it has an area of about 510 million km2 (197 million sq mi).[12] Earth can be divided into two hemispheres: by latitude into the polar Northern and Southern hemispheres; or by longitude into the continental Eastern and Western hemispheres.
+                
+                Most of Earth's surface is ocean water: 70.8% or 361 million km2 (139 million sq mi).[96] This vast pool of salty water is often called the world ocean,[97][98] and makes Earth with its dynamic hydrosphere a water world[99][100] or ocean world.[101][102] Indeed, in Earth's early history the ocean may have covered Earth completely.[103] The world ocean is commonly divided into the Pacific Ocean, Atlantic Ocean, Indian Ocean, Antarctic or Southern Ocean, and Arctic Ocean, from largest to smallest. The ocean covers Earth's oceanic crust, with the shelf seas covering the shelves of the continental crust to a lesser extent. The oceanic crust forms large oceanic basins with features like abyssal plains, seamounts, submarine volcanoes,[87] oceanic trenches, submarine canyons, oceanic plateaus, and a globe-spanning mid-ocean ridge system.[104] At Earth's polar regions, the ocean surface is covered by seasonally variable amounts of sea ice that often connects with polar land, permafrost and ice sheets, forming polar ice caps.
+                
+                Earth's land covers 29.2%, or 149 million km2 (58 million sq mi) of Earth's surface. The land surface includes many islands around the globe, but most of the land surface is taken by the four continental landmasses, which are (in descending order): Africa-Eurasia, America (landmass), Antarctica, and Australia (landmass).[105][106][107] These landmasses are further broken down and grouped into the continents. The terrain of the land surface varies greatly and consists of mountains, deserts, plains, plateaus, and other landforms. The elevation of the land surface varies from a low point of −418 m (−1,371 ft) at the Dead Sea, to a maximum altitude of 8,848 m (29,029 ft) at the top of Mount Everest. The mean height of land above sea level is about 797 m (2,615 ft).[108]
+                
+                Land can be covered by surface water, snow, ice, artificial structures or vegetation. Most of Earth's land hosts vegetation,[109] but considerable amounts of land are ice sheets (10%,[110] not including the equally large area of land under permafrost)[111] or deserts (33%).[112]
+                
+                The pedosphere is the outermost layer of Earth's land surface and is composed of soil and subject to soil formation processes. Soil is crucial for land to be arable. Earth's total arable land is 10.7% of the land surface, with 1.3% being permanent cropland.[113][114] Earth has an estimated 16.7 million km2 (6.4 million sq mi) of cropland and 33.5 million km2 (12.9 million sq mi) of pastureland.[115]
+                
+                The land surface and the ocean floor form the top of Earth's crust, which together with parts of the upper mantle form Earth's lithosphere. Earth's crust may be divided into oceanic and continental crust. Beneath the ocean-floor sediments, the oceanic crust is predominantly basaltic, while the continental crust may include lower density materials such as granite, sediments and metamorphic rocks.[116] Nearly 75% of the continental surfaces are covered by sedimentary rocks, although they form about 5% of the mass of the crust.[117]
+                
+                Earth's surface topography comprises both the topography of the ocean surface, and the shape of Earth's land surface. The submarine terrain of the ocean floor has an average bathymetric depth of 4 km, and is as varied as the terrain above sea level. Earth's surface is continually being shaped by internal plate tectonic processes including earthquakes and volcanism; by weathering and erosion driven by ice, water, wind and temperature; and by biological processes including the growth and decomposition of biomass into soil.[118][119]
+              <br>  <h1>Tectonic plates</h1><br>
+                
+                Main article: Plate tectonics
+                Shows the extent and boundaries of tectonic plates, with superimposed outlines of the continents they support
+                Earth's major plates, which are:[120]
+                  Pacific Plate  African Plate[n 7]  North American Plate  Eurasian Plate  Antarctic Plate  Indo-Australian Plate  South American Plate
+                Earth's mechanically rigid outer layer of Earth's crust and upper mantle, the lithosphere, is divided into tectonic plates. These plates are rigid segments that move relative to each other at one of three boundaries types: at convergent boundaries, two plates come together; at divergent boundaries, two plates are pulled apart; and at transform boundaries, two plates slide past one another laterally. Along these plate boundaries, earthquakes, volcanic activity, mountain-building, and oceanic trench formation can occur.[121] The tectonic plates ride on top of the asthenosphere, the solid but less-viscous part of the upper mantle that can flow and move along with the plates.[122]
+                
+                As the tectonic plates migrate, oceanic crust is subducted under the leading edges of the plates at convergent boundaries. At the same time, the upwelling of mantle material at divergent boundaries creates mid-ocean ridges. The combination of these processes recycles the oceanic crust back into the mantle. Due to this recycling, most of the ocean floor is less than 100 Ma old. The oldest oceanic crust is located in the Western Pacific and is estimated to be 200 Ma old.[123][124] By comparison, the oldest dated continental crust is 4,030 Ma,[125] although zircons have been found preserved as clasts within Eoarchean sedimentary rocks that give ages up to 4,400 Ma, indicating that at least some continental crust existed at that time.[50]
+                
+                The seven major plates are the Pacific, North American, Eurasian, African, Antarctic, Indo-Australian, and South American. Other notable plates include the Arabian Plate, the Caribbean Plate, the Nazca Plate off the west coast of South America and the Scotia Plate in the southern Atlantic Ocean. The Australian Plate fused with the Indian Plate between 50 and 55 Ma. The fastest-moving plates are the oceanic plates, with the Cocos Plate advancing at a rate of 75 mm/a (3.0 in/year)[126] and the Pacific Plate moving 52–69 mm/a (2.0–2.7 in/year). At the other extreme, the slowest-moving plate is the South American Plate, progressing at a typical rate of 10.6 mm/a (0.42 in/year).[127]
+                <br><h1> Internal structure</h1>
+               
+                Main article: Internal structure of Earth
+                Geologic layers of Earth[128]
+                
+                Illustration of Earth's cutaway, not to scale
+                Depth[129]
+                (km)	Component
+                layer name	Density
+                (g/cm3)
+                0–60	Lithosphere[n 8]	—
+                0–35	Crust[n 9]	2.2–2.9
+                35–660	Upper mantle	3.4–4.4
+                660–2890	Lower mantle	3.4–5.6
+                100–700	Asthenosphere	—
+                2890–5100	Outer core	9.9–12.2
+                5100–6378	Inner core	12.8–13.1
+                Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle. The crust is separated from the mantle by the Mohorovičić discontinuity.[130] The thickness of the crust varies from about 6 kilometres (3.7 mi) under the oceans to 30–50 km (19–31 mi) for the continents. The crust and the cold, rigid, top of the upper mantle are collectively known as the lithosphere, which is divided into independently moving tectonic plates.[131]
+                
+                Beneath the lithosphere is the asthenosphere, a relatively low-viscosity layer on which the lithosphere rides. Important changes in crystal structure within the mantle occur at 410 and 660 km (250 and 410 mi) below the surface, spanning a transition zone that separates the upper and lower mantle. Beneath the mantle, an extremely low viscosity liquid outer core lies above a solid inner core.[132] Earth's inner core may be rotating at a slightly higher angular velocity than the remainder of the planet, advancing by 0.1–0.5° per year, although both somewhat higher and much lower rates have also been proposed.[133] The radius of the inner core is about one-fifth of that of Earth. The density increases with depth. Among the Solar System's planetary-sized objects, Earth is the object with the highest density.
+                
+                Chemical composition
+                Further information: Abundance of the chemical elements § Earth
+                See also: Abundance of elements in Earth's crust
+                Earth's mass is approximately 5.97×1024 kg (5.970 Yg). It is composed mostly of iron (32.1% by mass), oxygen (30.1%), silicon (15.1%), magnesium (13.9%), sulfur (2.9%), nickel (1.8%), calcium (1.5%), and aluminium (1.4%), with the remaining 1.2% consisting of trace amounts of other elements. Due to gravitational separation, the core is primarily composed of the denser elements: iron (88.8%), with smaller amounts of nickel (5.8%), sulfur (4.5%), and less than 1% trace elements.[134][49] The most common rock constituents of the crust are oxides. Over 99% of the crust is composed of various oxides of eleven elements, principally oxides containing silicon (the silicate minerals), aluminium, iron, calcium, magnesium, potassium, or sodium.[135][134]
+                <br><h1>Internal heat</h1><br>
+                
+                Main article: Earth's internal heat budget
+                
+                A map of heat flow from Earth's interior to the surface of Earth's crust, mostly along the oceanic ridges
+                The major contributors to Earth's internal heat are primordial heat (heat left over from Earth's formation) and radiogenic heat (heat produced by radioactive decay).[136] The major heat-producing isotopes within Earth are potassium-40, uranium-238, and thorium-232.[137] At the center, the temperature may be up to 6,000 °C (10,830 °F),[138] and the pressure could reach 360 GPa (52 million psi).[139] Because much of the heat is provided by radioactive decay, scientists postulate that early in Earth's history, before isotopes with short half-lives were depleted, Earth's heat production was much higher. At approximately 3 Gyr, twice the present-day heat would have been produced, increasing the rates of mantle convection and plate tectonics, and allowing the production of uncommon igneous rocks such as komatiites that are rarely formed today.[140][141]
+                
+                The mean heat loss from Earth is 87 mW m−2, for a global heat loss of 4.42×1013 W.[142] A portion of the core's thermal energy is transported toward the crust by mantle plumes, a form of convection consisting of upwellings of higher-temperature rock. These plumes can produce hotspots and flood basalts.[143] More of the heat in Earth is lost through plate tectonics, by mantle upwelling associated with mid-ocean ridges. The final major mode of heat loss is through conduction through the lithosphere, the majority of which occurs under the oceans.[144]
+                
+                Gravitational field
+                Main article: Gravity of Earth
+                The gravity of Earth is the acceleration that is imparted to objects due to the distribution of mass within Earth. Near Earth's surface, gravitational acceleration is approximately 9.8 m/s2 (32 ft/s2). Local differences in topography, geology, and deeper tectonic structure cause local and broad regional differences in Earth's gravitational field, known as gravity anomalies.[145]
+                
+                Magnetic field
+                Main article: Earth's magnetic field
+                Diagram showing the magnetic field lines of Earth's magnetosphere. The lines are swept back in the anti-solar direction under the influence of the solar wind.
+                A schematic view of Earth's magnetosphere with solar wind flowing from left to right
+                The main part of Earth's magnetic field is generated in the core, the site of a dynamo process that converts the kinetic energy of thermally and compositionally driven convection into electrical and magnetic field energy. The field extends outwards from the core, through the mantle, and up to Earth's surface, where it is, approximately, a dipole. The poles of the dipole are located close to Earth's geographic poles. At the equator of the magnetic field, the magnetic-field strength at the surface is 3.05×10−5 T, with a magnetic dipole moment of 7.79×1022 Am2 at epoch 2000, decreasing nearly 6% per century (although it still remains stronger than its long time average).[146] The convection movements in the core are chaotic; the magnetic poles drift and periodically change alignment. This causes secular variation of the main field and field reversals at irregular intervals averaging a few times every million years. The most recent reversal occurred approximately 700,000 years ago.[147][148]
+                
+                The extent of Earth's magnetic field in space defines the magnetosphere. Ions and electrons of the solar wind are deflected by the magnetosphere; solar wind pressure compresses the day-side of the magnetosphere, to about 10 Earth radii, and extends the night-side magnetosphere into a long tail.[149] Because the velocity of the solar wind is greater than the speed at which waves propagate through the solar wind, a supersonic bow shock precedes the day-side magnetosphere within the solar wind.[150] Charged particles are contained within the magnetosphere; the plasmasphere is defined by low-energy particles that essentially follow magnetic field lines as Earth rotates.[151][152] The ring current is defined by medium-energy particles that drift relative to the geomagnetic field, but with paths that are still dominated by the magnetic field,[153] and the Van Allen radiation belts are formed by high-energy particles whose motion is essentially random, but contained in the magnetosphere.[154][155] During magnetic storms and substorms, charged particles can be deflected from the outer magnetosphere and especially the magnetotail, directed along field lines into Earth's ionosphere, where atmospheric atoms can be excited and ionized, causing an aurora.[156]<br><h1>Orbit and rotation</h1><br>Rotation
+                Main article: Earth's rotation
+                
+                Satellite time lapse imagery of Earth's rotation showing axis tilt
+                Earth's rotation period relative to the Sun—its mean solar day—is 86,400 seconds of mean solar time (86,400.0025 SI seconds).[157] Because Earth's solar day is now slightly longer than it was during the 19th century due to tidal deceleration, each day varies between 0 and 2 ms longer than the mean solar day.[158][159]
+                
+                Earth's rotation period relative to the fixed stars, called its stellar day by the International Earth Rotation and Reference Systems Service (IERS), is 86,164.0989 seconds of mean solar time (UT1), or 23h 56m 4.0989s.[2][n 10] Earth's rotation period relative to the precessing or moving mean March equinox (when the Sun is at 90° on the equator), is 86,164.0905 seconds of mean solar time (UT1) (23h 56m 4.0905s).[2] Thus the sidereal day is shorter than the stellar day by about 8.4 ms.[160]
+                
+                Apart from meteors within the atmosphere and low-orbiting satellites, the main apparent motion of celestial bodies in Earth's sky is to the west at a rate of 15°/h = 15'/min. For bodies near the celestial equator, this is equivalent to an apparent diameter of the Sun or the Moon every two minutes; from Earth's surface, the apparent sizes of the Sun and the Moon are approximately the same.[161][162]
+                <br><h1> Main articles: </h1><h2> Earth's orbit and Earth's location</h2><br>
+                Orbit
+              
+                
+                Exaggerated illustration of Earth's elliptical orbit around the Sun, marking that the orbital extreme points (apoapsis and periapsis) are not the same as the four seasonal extreme points, the equinox and solstice
+                Earth orbits the Sun, making Earth the third-closest planet to the Sun and part of the inner Solar System. Earth's average orbital distance is about 150 million km (93 million mi), which is the basis for the astronomical unit (AU) and is equal to roughly 8.3 light minutes or 380 times Earth's distance to the Moon. Earth orbits the Sun every 365.2564 mean solar days, or one sidereal year. With an apparent movement of the Sun in Earth's sky at a rate of about 1°/day eastward, which is one apparent Sun or Moon diameter every 12 hours. Due to this motion, on average it takes 24 hours—a solar day—for Earth to complete a full rotation about its axis so that the Sun returns to the meridian.
+                
+                The orbital speed of Earth averages about 29.78 km/s (107,200 km/h; 66,600 mph), which is fast enough to travel a distance equal to Earth's diameter, about 12,742 km (7,918 mi), in seven minutes, and the distance from Earth to the Moon, 384,400 km (238,900 mi), in about 3.5 hours.[3]
+                
+                The Moon and Earth orbit a common barycenter every 27.32 days relative to the background stars. When combined with the Earth–Moon system's common orbit around the Sun, the period of the synodic month, from new moon to new moon, is 29.53 days. Viewed from the celestial north pole, the motion of Earth, the Moon, and their axial rotations are all counterclockwise. Viewed from a vantage point above the Sun and Earth's north poles, Earth orbits in a counterclockwise direction about the Sun. The orbital and axial planes are not precisely aligned: Earth's axis is tilted some 23.44 degrees from the perpendicular to the Earth–Sun plane (the ecliptic), and the Earth-Moon plane is tilted up to ±5.1 degrees against the Earth–Sun plane. Without this tilt, there would be an eclipse every two weeks, alternating between lunar eclipses and solar eclipses.[3][163]
+                
+                The Hill sphere, or the sphere of gravitational influence, of Earth is about 1.5 million km (930,000 mi) in radius.[164][n 11] This is the maximum distance at which Earth's gravitational influence is stronger than that of the more distant Sun and planets. Objects must orbit Earth within this radius, or they can become unbound by the gravitational perturbation of the Sun.[164] Earth, along with the Solar System, is situated in the Milky Way and orbits about 28,000 light-years from its center. It is about 20 light-years above the galactic plane in the Orion Arm.[165]
+                
+                Axial tilt and seasons
+                Main article: Axial tilt § Earth
+                
+                Earth's axial tilt causing different angles of seasonal illumination at different orbital positions around the Sun
+                The axial tilt of Earth is approximately 23.439281°[2] with the axis of its orbit plane, always pointing towards the Celestial Poles. Due to Earth's axial tilt, the amount of sunlight reaching any given point on the surface varies over the course of the year. This causes the seasonal change in climate, with summer in the Northern Hemisphere occurring when the Tropic of Cancer is facing the Sun, and in the Southern Hemisphere when the Tropic of Capricorn faces the Sun. In each instance, winter occurs simultaneously in the opposite hemisphere.
+                
+                During the summer, the day lasts longer, and the Sun climbs higher in the sky. In winter, the climate becomes cooler and the days shorter.[166] Above the Arctic Circle and below the Antarctic Circle there is no daylight at all for part of the year, causing a polar night, and this night extends for several months at the poles themselves. These same latitudes also experience a midnight sun, where the sun remains visible all day.[167][168]
+                
+                By astronomical convention, the four seasons can be determined by the solstices—the points in the orbit of maximum axial tilt toward or away from the Sun—and the equinoxes, when Earth's rotational axis is aligned with its orbital axis. In the Northern Hemisphere, winter solstice currently occurs around 21 December; summer solstice is near 21 June, spring equinox is around 20 March and autumnal equinox is about 22 or 23 September. In the Southern Hemisphere, the situation is reversed, with the summer and winter solstices exchanged and the spring and autumnal equinox dates swapped.[169]
+                
+                The angle of Earth's axial tilt is relatively stable over long periods of time. Its axial tilt does undergo nutation; a slight, irregular motion with a main period of 18.6 years.[170] The orientation (rather than the angle) of Earth's axis also changes over time, precessing around in a complete circle over each 25,800-year cycle; this precession is the reason for the difference between a sidereal year and a tropical year. Both of these motions are caused by the varying attraction of the Sun and the Moon on Earth's equatorial bulge. The poles also migrate a few meters across Earth's surface. This polar motion has multiple, cyclical components, which collectively are termed quasiperiodic motion. In addition to an annual component to this motion, there is a 14-month cycle called the Chandler wobble. Earth's rotational velocity also varies in a phenomenon known as length-of-day variation.[171]
+                
+                Earth's annual orbit is elliptical rather than circular, and its closest approach to the Sun is called perihelion. In modern times, Earth's perihelion occurs around 3 January, and its aphelion around 4 July. These dates shift over time due to precession and changes to the orbit, the latter of which follows cyclical patterns known as Milankovitch cycles. The annual change in the Earth–Sun distance causes an increase of about 6.8% in solar energy reaching Earth at perihelion relative to aphelion.[172][n 12] Because the Southern Hemisphere is tilted toward the Sun at about the same time that Earth reaches the closest approach to the Sun, the Southern Hemisphere receives slightly more energy from the Sun than does the northern over the course of a year. This effect is much less significant than the total energy change due to the axial tilt, and most of the excess energy is absorbed by the higher proportion of water in the Southern Hemisphere.[173]<br><h1>Earth–Moon system</h1><br>Moon
+                Main articles: Moon, Lunar theory, and Orbit of the Moon
+                
+                Earth and the Moon as seen from Mars by the Mars Reconnaissance Orbiter
+                The Moon is a relatively large, terrestrial, planet-like natural satellite, with a diameter about one-quarter of Earth's. It is the largest moon in the Solar System relative to the size of its planet, although Charon is larger relative to the dwarf planet Pluto.[174][175] The natural satellites of other planets are also referred to as "moons", after Earth's.[176] The most widely accepted theory of the Moon's origin, the giant-impact hypothesis, states that it formed from the collision of a Mars-size protoplanet called Theia with the early Earth. This hypothesis explains the Moon's relative lack of iron and volatile elements and the fact that its composition is nearly identical to that of Earth's crust.[40] Computer simulations suggest that two blob-like remnants of this protoplanet could be inside the Earth.[177][178]
+                
+                The gravitational attraction between Earth and the Moon causes lunar tides on Earth.[179] The same effect on the Moon has led to its tidal locking: its rotation period is the same as the time it takes to orbit Earth. As a result, it always presents the same face to the planet.[180] As the Moon orbits Earth, different parts of its face are illuminated by the Sun, leading to the lunar phases.[181] Due to their tidal interaction, the Moon recedes from Earth at the rate of approximately 38 mm/a (1.5 in/year). Over millions of years, these tiny modifications—and the lengthening of Earth's day by about 23 μs/yr—add up to significant changes.[182] During the Ediacaran period, for example, (approximately 620 Ma) there were 400±7 days in a year, with each day lasting 21.9±0.4 hours.[183]
+                
+                The Moon may have dramatically affected the development of life by moderating the planet's climate. Paleontological evidence and computer simulations show that Earth's axial tilt is stabilized by tidal interactions with the Moon.[184] Some theorists think that without this stabilization against the torques applied by the Sun and planets to Earth's equatorial bulge, the rotational axis might be chaotically unstable, exhibiting large changes over millions of years, as is the case for Mars, though this is disputed.[185][186]
+                
+                Viewed from Earth, the Moon is just far enough away to have almost the same apparent-sized disk as the Sun. The angular size (or solid angle) of these two bodies match because, although the Sun's diameter is about 400 times as large as the Moon's, it is also 400 times more distant.[162] This allows total and annular solar eclipses to occur on Earth.[187]
+                
+                Asteroids and artificial satellites
+                Main articles: Near-Earth object and Claimed moons of Earth
+                
+                A computer-generated image mapping the prevalence of artificial satellites and space debris around Earth in geosynchronous and low Earth orbit
+                Earth's co-orbital asteroids population consists of quasi-satellites, objects with a horseshoe orbit and trojans. There are at least seven quasi-satellites, including 469219 Kamoʻoalewa, ranging in diameter from 10 m to 5000 m.[188][189] A trojan asteroid companion, 2010 TK7, is librating around the leading Lagrange triangular point, L4, in Earth's orbit around the Sun.[190] The tiny near-Earth asteroid 2006 RH120 makes close approaches to the Earth–Moon system roughly every twenty years. During these approaches, it can orbit Earth for brief periods of time.[191]
+                
+                As of September 2021, there are 4,550 operational, human-made satellites orbiting Earth.[192] There are also inoperative satellites, including Vanguard 1, the oldest satellite currently in orbit, and over 16,000 pieces of tracked space debris.[n 13] Earth's largest artificial satellite is the International Space Station (ISS).[193]</p>
+        </div>
+        <div id="mars" class="planet-details">
+            <h2>Mars</h2>
+            <p>Mars is known as the Red Planet due to its reddish appearance, caused by iron oxide.<br>Mars is the fourth planet from the Sun. The surface of Mars is orange-red because it is covered in iron(III) oxide dust, giving it the nickname "the Red Planet".[22][23] Mars is among the brightest objects in Earth's sky, and its high-contrast albedo features have made it a common subject for telescope viewing. It is classified as a terrestrial planet and is the second smallest of the Solar System's planets with a diameter of 6,779 km (4,212 mi). In terms of orbital motion, a Martian solar day (sol) is equal to 24.6 hours, and a Martian solar year is equal to 1.88 Earth years (687 Earth days). Mars has two natural satellites that are small and irregular in shape: Phobos and Deimos.
+
+                The relatively flat plains in northern parts of Mars strongly contrast with the cratered terrain in southern highlands – this terrain observation is known as the Martian dichotomy. Mars hosts many enormous extinct volcanoes (the tallest is Olympus Mons, 21.9 km or 13.6 mi tall) and one of the largest canyons in the Solar System (Valles Marineris, 4,000 km or 2,500 mi long). Geologically, the planet is fairly active with marsquakes trembling underneath the ground, dust devils sweeping across the landscape, and cirrus clouds. Carbon dioxide is substantially present in Mars's polar ice caps and thin atmosphere. During a year, there are large surface temperature swings on the surface between −78.5 °C (−109.3 °F) to 5.7 °C (42.3 °F)[c] similar to Earth's seasons, as both planets have significant axial tilt.
+                
+                Mars was formed approximately 4.5 billion years ago. During the Noachian period (4.5 to 3.5 billion years ago), Mars's surface was marked by meteor impacts, valley formation, erosion, and the possible presence of water oceans. The Hesperian period (3.5 to 3.3–2.9 billion years ago) was dominated by widespread volcanic activity and flooding that carved immense outflow channels. The Amazonian period, which continues to the present, has been marked by the wind as a dominant influence on geological processes. Due to Mars's geological history, the possibility of past or present life on Mars remains of great scientific interest.
+                
+                Since the late 20th century, Mars has been explored by uncrewed spacecraft and rovers, with the first flyby by the Mariner 4 probe in 1965, the first orbit by the Mars 2 probe in 1971, and the first landing by the Viking 1 probe in 1976. As of 2023, there are at least 11 active probes orbiting Mars or on the Martian surface. Mars is an attractive target for future human exploration missions, though in the 2020s no such mission is planned.<br><h1>Natural history</h1><br>Scientists have theorized that during the Solar System's formation, Mars was created as the result of a random process of run-away accretion of material from the protoplanetary disk that orbited the Sun. Mars has many distinctive chemical features caused by its position in the Solar System. Elements with comparatively low boiling points, such as chlorine, phosphorus, and sulfur, are much more common on Mars than on Earth; these elements were probably pushed outward by the young Sun's energetic solar wind.[24]
+
+                After the formation of the planets, the inner Solar System may have been subjected to the so-called Late Heavy Bombardment. About 60% of the surface of Mars shows a record of impacts from that era,[25][26][27] whereas much of the remaining surface is probably underlain by immense impact basins caused by those events. However, more recent modeling has disputed the existence of the Late Heavy Bombardment.[28] There is evidence of an enormous impact basin in the Northern Hemisphere of Mars, spanning 10,600 by 8,500 kilometres (6,600 by 5,300 mi), or roughly four times the size of the Moon's South Pole–Aitken basin, which would be the largest impact basin yet discovered if confirmed.[29] It has been hypothesized that the basin was formed when Mars was struck by a Pluto-sized body about four billion years ago. The event, thought to be the cause of the Martian hemispheric dichotomy, created the smooth Borealis basin that covers 40% of the planet.[30][31]
+                
+                A 2023 study shows evidence, based on the orbital inclination of Deimos (a small moon of Mars), that Mars may once have had a ring system 3.5 billion years to 4 billion years ago.[32] This ring system may have been formed from a moon, 20 times more massive than Phobos, orbiting Mars billions of years ago; and Phobos would be a remnant of that ring.[33][34]
+                
+                The geological history of Mars can be split into many periods, but the following are the three primary periods:[35][36]
+                
+                Noachian period: Formation of the oldest extant surfaces of Mars, 4.5 to 3.5 billion years ago. Noachian age surfaces are scarred by many large impact craters. The Tharsis bulge, a volcanic upland, is thought to have formed during this period, with extensive flooding by liquid water late in the period. Named after Noachis Terra.[37]
+                Hesperian period: 3.5 to between 3.3 and 2.9 billion years ago. The Hesperian period is marked by the formation of extensive lava plains. Named after Hesperia Planum.[37]
+                Amazonian period: between 3.3 and 2.9 billion years ago to the present. Amazonian regions have few meteorite impact craters but are otherwise quite varied. Olympus Mons formed during this period, with lava flows elsewhere on Mars. Named after Amazonis Planitia.[37]
+                Geological activity is still taking place on Mars. The Athabasca Valles is home to sheet-like lava flows created about 200 million years ago. Water flows in the grabens called the Cerberus Fossae occurred less than 20 million years ago, indicating equally recent volcanic intrusions.[38] The Mars Reconnaissance Orbiter has captured images of avalanches.[39][40]<br><h1>Physical characteristics</h1><br>Like Earth, Mars is differentiated into a dense metallic core overlaid by less dense rocky layers.[45][46] The outermost layer is the crust, which is on average about 42–56 kilometres (26–35 mi) thick,[47] with a minimum thickness of 6 kilometres (3.7 mi) in Isidis Planitia, and a maximum thickness of 117 kilometres (73 mi) in the southern Tharsis plateau.[48] For comparison, Earth's crust averages 27.3 ± 4.8 km in thickness.[49] The most abundant elements in the Martian crust are silicon, oxygen, iron, magnesium, aluminium, calcium, and potassium. Mars is confirmed to be seismically active;[50] in 2019 it was reported that InSight had detected and recorded over 450 marsquakes and related events.[51][52]
+
+                Beneath the crust is a silicate mantle responsible for many of the tectonic and volcanic features on the planet's surface. The upper Martian mantle is a low-velocity zone, where the velocity of seismic waves is lower than surrounding depth intervals. The mantle appears to be rigid down to the depth of about 250 km,[44] giving Mars a very thick lithosphere compared to Earth. Below this the mantle gradually becomes more ductile, and the seismic wave velocity starts to grow again.[53] The Martian mantle does not appear to have a thermally insulating layer analogous to Earth's lower mantle; instead, below 1050 km in depth, it becomes mineralogically similar to Earth's transition zone.[43] At the bottom of the mantle lies a basal liquid silicate layer approximately 150–180 km thick.[44][54]
+                
+                Mars's iron and nickel core is completely molten, with no solid inner core.[55][56] It is around half of Mars's radius, approximately 1650–1675 km, and is enriched in light elements such as sulfur, oxygen, carbon, and hydrogen.[57][58]
+                
+                Surface geology
+                Further information: Martian soil
+                
+                Curiosity's view of Martian soil and boulders after crossing the "Dingo Gap" sand dune
+                Mars is a terrestrial planet with a surface that consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The Martian surface is primarily composed of tholeiitic basalt,[59] although parts are more silica-rich than typical basalt and may be similar to andesitic rocks on Earth, or silica glass. Regions of low albedo suggest concentrations of plagioclase feldspar, with northern low albedo regions displaying higher than normal concentrations of sheet silicates and high-silicon glass. Parts of the southern highlands include detectable amounts of high-calcium pyroxenes. Localized concentrations of hematite and olivine have been found.[60] Much of the surface is deeply covered by finely grained iron(III) oxide dust.[61]
+                
+                Although Mars has no evidence of a structured global magnetic field,[62] observations show that parts of the planet's crust have been magnetized, suggesting that alternating polarity reversals of its dipole field have occurred in the past. This paleomagnetism of magnetically susceptible minerals is similar to the alternating bands found on Earth's ocean floors. One hypothesis, published in 1999 and re-examined in October 2005 (with the help of the Mars Global Surveyor), is that these bands suggest plate tectonic activity on Mars four billion years ago, before the planetary dynamo ceased to function and the planet's magnetic field faded.[63]
+                
+                The Phoenix lander returned data showing Martian soil to be slightly alkaline and containing elements such as magnesium, sodium, potassium and chlorine. These nutrients are found in soils on Earth. They are necessary for growth of plants.[64] Experiments performed by the lander showed that the Martian soil has a basic pH of 7.7, and contains 0.6% perchlorate by weight,[65][66] concentrations that are toxic to humans.[67][68]
+                
+                Streaks are common across Mars and new ones appear frequently on steep slopes of craters, troughs, and valleys. The streaks are dark at first and get lighter with age. The streaks can start in a tiny area, then spread out for hundreds of metres. They have been seen to follow the edges of boulders and other obstacles in their path.<br> The commonly accepted hypotheses include that they are dark underlying layers of soil revealed after avalanches of bright dust or dust devils.[69] Several other explanations have been put forward, including those that involve water or even the growth of organisms.[70][71]
+                
+                Environmental radiation levels on the surface are on average 0.64 millisieverts of radiation per day, and significantly less than the radiation of 1.84 millisieverts per day or 22 millirads per day during the flight to and from Mars.[72][73] For comparison the radiation levels in low Earth orbit, where Earth's space stations orbit, are around 0.5 millisieverts of radiation per day.[74] Hellas Planitia has the lowest surface radiation at about 0.342 millisieverts per day, featuring lava tubes southwest of Hadriacus Mons with potentially levels as low as 0.064 millisieverts per day,[75] comparable to radiation levels during flights on Earth.</p>
+        </div>
+        <div id="jupiter" class="planet-details">
+            <h2>Jupiter</h2>
+            <p>Jupiter is the largest planet in the solar system, famous for its Great Red Spot.<br>Jupiter is the largest planet in our solar system. It's a gas giant with swirling cloud stripes, rings, and many moons. 
+                Size: 
+                Jupiter is the largest planet in our solar system.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter.jpg/480px-Jupiter.jpg">
+                It's similar to a star, but it never became massive enough to start burning.
+                Moons: 
+                Jupiter has many moons, including the four largest moons: Ganymede, Callisto, Io, and Europa.
+                Ganymede is the largest moon in the solar system and is larger than Mercury.
+                Io has many active volcanoes that produce sulfur.
+                Europa is thought to have twice as much water as Earth.
+                Rings: 
+                Jupiter has faint rings made of small, dark particles of dust.
+                The main ring is flattened and about 20 miles thick.
+                The halo ring is donut-shaped and more than 12,000 miles thick.
+                The gossamer ring is made up of microscopic debris from three of Jupiter's moons.
+                Storms: 
+                Jupiter has giant storms, including the Great Red Spot, which is a huge anticyclone that has been raging for hundreds of years.
+                The Great Red Spot's winds can reach speeds of over 680 km per hour.
+                Exploration: 
+                NASA's Juno probe is the only mission currently operating at Jupiter.
+                ESA's Jupiter Icy Moons Explorer (Juice) will arrive at Jupiter in 2031.<br>Jupiter is the largest planet in the Solar System. It is the fifth planet from the Sun.[17] Jupiter is a gas giant because it is large and made mostly of gas, gas giants are a subtype of giant planets.[18] The other giant planets in the Solar System are Saturn, Uranus, and Neptune.
+
+                Jupiter was discovered by Galileo Galilei in 1610 with a small telescope. The planet has a Great Red Spot which is located at 22 degrees south of Jupiter's equator. The great red spot produces wind-speeds up to 432 km/h (268 mph).
+                
+                By mass, Jupiter's atmosphere is around 76% hydrogen and 24% helium. However, since helium atoms are larger than hydrogen molecules, Jupiter's upper atmosphere is about 90% hydrogen and 10% helium by volume. The atmosphere also contains small amounts of methane, water vapour, ammonia, and silicon-based compounds as well as trace amounts of carbon, ethane, hydrogen sulfide, neon, oxygen, phosphine, and sulfur. The outermost layer of the atmosphere contains crystals of frozen ammonia. Through infrared and ultraviolet measurements, small amounts of benzene and other hydrocarbons have also been found. The interior of Jupiter contains denser materials—by mass it is roughly 71% hydrogen, 24% helium, and 5% other elements.
+                
+                Jupiter was the first planet to form. It moved towards the center during the early times of the Solar System. This affected how other planets were formed. Hydrogen make up most of Jupiter (90% by volume). Helium is the second and makes up a quarter of the mass and a tenth of the volume. Jupiter's interior is getting smaller. This process makes more heat than the planet receives from the Sun. It is believed that there is an outer mantle and a diffuse inner core of denser material inside Jupiter. Liquid metallic hydrogen would make up the outer mantle. Jupiter rotates very fast at 1 rotation per 10 hours. This creates a slight but noticeable bulge around the equator. So, Jupiter's shape is an oblate spheroid. The outer atmosphere have many bands across the latitude. Interactions between the bands create turbulence and storms. The Great Red Spot is the most obvious example. It is a giant storm which has was seen since 1831 and possibly earlier.
+                
+                Name and symbol
+                
+                The symbol for Jupiter in late Classical (4th c.) and medieval Byzantine (11th c.) manuscripts comes from Ζ (zeta).[19]
+                Jupiter was named for the king of the gods. The Greeks called him Zeus. The Romans called him Jupiter. The symbol for Jupiter, ♃, is from the Greek zeta. It has a horizontal stroke ⟨Ƶ⟩. This stands as an abbreviation for Zeus.[19][20][page needed][21]
+                
+                Structure
+                Jupiter is the biggest planet in the Solar System. Its diameter is 142,984 km. This is eleven times larger than the diameter of Earth.[22] Jupiter is twice as massive as all the other planets in the Solar System put together.[23] Jupiter is 318 times as massive as Earth. The volume of Jupiter is 1,317 times the volume of Earth. In other words, 1,317 Earth-sized objects could fit inside it.[24] It gives off more heat than it gets from the Sun.[25][page needed]</p>
+        </div>
+        <div id="saturn" class="planet-details">
+            <h2>Saturn</h2>
+            <p>Saturn is known for its stunning ring system, made primarily of ice particles.<br><img src="https://media.istockphoto.com/id/480019224/photo/saturn.jpg?s=612x612&w=0&k=20&c=v87XpxkyKNXGJVcQ_m3wWYihAUGNK1bvadEWkhccGdk="><br>Saturn is the sixth planet from the Sun in the Solar System. Saturn takes about 29.5 Earth years to complete one orbit around the Sun. A day on Saturn is much shorter than an Earth day, lasting only about 10.7 hours. This means that Saturn spins much faster than Earth, completing more than two rotations in the same time it takes Earth to complete just one. [22]
+
+                Saturn is one of the four giant planets in the Solar System, with Jupiter, Uranus, and Neptune. It is the second largest planet in the Solar System (Jupiter is the largest).[23]
+                
+                Saturn was named after the Roman god Saturn. He was the Roman equivalent of the Greek god Kronos.[24] Saturn's symbol is ♄ which is the symbol of Saturnus' sickle.[25]
+                
+                Inside Saturn is probably a core of iron, nickel, silicon and oxygen compounds, surrounded by a deep layer of metallic hydrogen, then a layer of liquid hydrogen and liquid helium and finally, an outer gaseous layer.[26]
+                
+                Saturn has 146 known moons orbiting the planet.[27] The largest moon is Titan. Titan is larger in volume than the planet Mercury. It is the second-largest moon in the Solar System. The largest moon is a moon of Jupiter, Ganymede. There are also many rings around Saturn. These rings are made of ice with some rocks and dust. Some people think that that the rings were made by a moon impact or other event. Saturn is about 1,433,000,000 km (870,000,000 mi) on average from the Sun. Saturn takes 29.4 Earth years in order to complete a revolution around the Sun.[28]<h1>Physical features</h1>Saturn is a squished sphere. This means that it is flattened at the poles and wider around the equator.[29] The planet's equatorial diameter is 120,536 km (74,898 mi). Its polar diameter (the distance from the north pole to the south pole through the centre) is 108,728 km (67,560 mi). This is a 9% difference.[30] Saturn has a flattened shape because of its very fast rotation. It rotates once every 10.8 Earth hours.
+
+                Saturn is the only planet in the Solar System that is less dense than water. Even though the planet's core is very dense, it has a gaseous atmosphere. This makes its average density is 0.69 g/cm3. This means if Saturn could be placed in a large pool of water, it would float.[31]
+                
+                Atmosphere
+                The outer part of Saturn's atmosphere is made up of about 96% hydrogen, 3% helium, 0.4% methane and 0.01% ammonia. There is also some acetylene, ethane and phosphine.[32]
+                
+                The hexagonal cloud
+                The north polar hexagonal cloud first found by Voyager 1 and later by Cassini
+                Saturn's clouds show a banded pattern. This is like the cloud bands seen on Jupiter. Saturn's clouds are much fainter and the bands are wider at the equator. Saturn's lowest cloud layer is made up of water ice. It is about 10 km (6 mi) thick.[32] The temperature there is quite low, at 250 K (-10°F, -23°C). However, scientists do not all agree on this. The layer above is made up of ammonium hydrosulfide ice. It is about 77 km (48 mi) thick. Above it is a layer of ammonia ice clouds which are 80 km (50 mi) thick.[32] The highest layer is made up of hydrogen and helium gases. It goes to between 200 km (124 mi) and 270 km (168 mi) above the water cloud tops. Auroras can be seen in Saturn in the mesosphere.[32] The temperature at Saturn's cloud tops is very low, at 98 K (-283 °F, -175 °C). The temperatures in the inner layers are much higher than the outside layers because of the heat made by Saturn's inside.[33] Saturn's winds are some of the fastest in the Solar System. They can reach 1,800 km/h (1,118 mph),[34] ten times faster than winds on Earth.[35]
+                
+                Storms and spots
+                Saturn's atmosphere can make oval shaped clouds. They are like the clearer spots seen on Jupiter. These oval spots are cyclonic storms, similar to cyclones seen on Earth. In 1990, the Hubble Space Telescope found a very large white cloud near Saturn's equator. Storms like this one in 1990 were known as Great White Spots. These unique storms only exist for a short time and only occur in about every 30 Earth years, in summer solstices in the Northern Hemisphere.[36] Great White Spots were also found in 1876, 1903, 1933, and 1960.
+                
+                The Voyager 1 spacecraft found a hexagonal cloud pattern near Saturn's north pole at about 78°N. The Cassini−Huygens probe later confirmed it in 2006. Unlike the north pole, the south pole does not show any hexagonal clouds. The probe also found a hurricane-like storm on the south pole that showed an eyewall. Until this finding, eyewalls had only been seen on Earth.[37]
+                
+                Interior
+                Saturn's inside is similar to Jupiter's inside. It has a small rocky core about the size of the Earth at its center.[29] It is very hot. Its temperature reaches 15,000 K (26,540 °F (14,727 °C)). Saturn is so hot that it gives out more heat energy into space than it gets from the Sun.[33] Above it is a thicker layer of metallic hydrogen, about 30,000 km (18,641 mi) deep. Above that layer is a region of liquid hydrogen and helium.[38] The core is heavy, with about 9 to 22 times more mass than the Earth's core.[39]
+                
+                Magnetic field
+                Saturn has a natural magnetic field that is weaker than Jupiter's. Like the Earth's, Saturn's field is a magnetic dipole (it has a North and a South). Saturn's field is unique in that it is perfectly symmetrical, unlike any other known planet.[40] This means the field is exactly in line with the planet's axis.[40] Saturn generates radio waves, but they are too weak to be detected from Earth.[41] The moon Titan orbits in the outer part of Saturn's magnetic field and gives out plasma to the field from the ionised particles in Titan's atmosphere.[42]<br><h1>Rotation and orbit</h1><br>Saturn's average distance from the Sun is over 1,400,000,000 km (886,000,000 mi). This is about nine times the distance from the Earth to the Sun. It takes 10,756 days, or about 29.4 years, for Saturn to orbit around the Sun.[43] This is known as Saturn's orbital period.
+
+                Voyager 1 measured Saturn's rotation as being 10 hours, 14 minutes at the equator, 10 hours, 40 minutes closer to the poles, and 10 hours, 39 minutes, 24 seconds for the planet's inside.[44] This is known as its rotational period.
+                
+                Cassini measured the rotation of Saturn as being 10 hours, 45 minutes, 45 seconds ± 36 seconds.[45] That is about six minutes longer than the radio rotational period measured by the Voyager 1 and Voyager 2 spacecrafts, which flew by Saturn in 1980 and 1981.
+                
+                Saturn's rotational period is calculated by the rotation speed of radio waves given off by the planet. The Cassini−Huygens spacecraft found that the radio waves slowed down. This suggested that the rotational period increased.[45] Since scientists do not think Saturn's rotation is actually slowing down, the explanation may be that the magnetic field causes the radio waves.[45]
+                
+                Planetary rings
+                See the main article: Rings of Saturn
+                Saturn is best known for its planetary rings which are easy to see with a telescope. There are seven named rings: A, B, C, D, E, F, and G.[46] They were named in the order they were found, which is different to their order from the planet. From the planet the rings are ordered: D, C, B, A, F, G and E.[46]: 57 
+                
+                Some scientists think that the rings are material left after a moon broke apart.[46]: 60  A new idea says that it was a very large moon, most of which crashed into the planet. This left a large amount of ice to form the rings and some of the moons. This includes Enceladus, which is thought to be made of ice.[46]: 61 
+                
+                History
+                The rings were first found by Galileo Galilei in 1610, using his telescope. They did not look like rings to Galileo. He called them "handles". He thought that Saturn was three different planets that were right next to each other. In 1612, when the rings were facing edge on with the Earth, the rings disappeared, then reappeared again in 1613, further confusing Galileo.[47] In 1655, Christiaan Huygens was the first person to say that Saturn was surrounded by rings. Using a much more powerful telescope than Galilei's, he said that Saturn "is surrounded by a thin, flat, ring, nowhere touching...".[47] In 1675, Giovanni Domenico Cassini found that the planet's rings were in fact made of smaller rings with gaps. The largest ring gap was later named the Cassini Division. In 1859, James Clerk Maxwell showed that the rings cannot be solid, but are made of small particles, each orbiting Saturn on their own. Otherwise, it would become unstable or break apart.[48] James Keeler studied the rings using a spectroscope in 1895 which proved Maxwell's theory.[49]
+                
+                Physical features
+                The rings range from 6,630 km (4,120 mi) to 120,700 km (75,000 mi) above the planet's equator. While the equatorial circumference of Saturn is 378,675 km (235,298 miles). As proved by Maxwell, even though the rings appear to be solid and unbroken when viewed from above, the rings are made of small particles of rock and ice. They are only about 10 m (33 ft) thick; made of silica rock, iron oxide and ice particles.[46]: 55  The smallest particles are only specks of dust while the largest are the size of a house. The C and D rings also seem to have a "wave" in them, like waves in water.[46]: 58  These large waves are 500 m (1,640 ft) high, but only moving slowly at about 250 m (820 ft) each day.[46]: 58  Some scientists believe that the wave is caused by Saturn's moons.[50] Another idea is the waves were made by a comet hitting Saturn in 1983 or 1984.[46]: 60 
+                
+                The largest gaps in the rings are the Cassini Division and the Encke Division, both visible from the Earth. The Cassini Division is the largest, measuring 4,800 km (2,983 mi) wide.[51] However, when the Voyager spacecrafts visited Saturn in 1980, they discovered that the rings are a complex structure, made out of thousands of thin gaps and ringlets. Scientists believe this is caused by the gravitational force of some of Saturn's moons. The tiny moon Pan orbits inside Saturn's rings, creating a gap within the rings. Other ringlets keep their structure due to the gravitational force of shepherd satellites, such as Prometheus and Pandora. Other gaps form due to the gravitational force of a large moon farther away. The moon Mimas is responsible for clearing away the Cassini gap.[51]
+                
+                Recent data from the Cassini spacecraft has shown that the rings have their own atmosphere, free from the planet's atmosphere. The rings' atmosphere is made of oxygen gas, and it is produced when the Sun's ultraviolet light breaks up the water ice in the rings. Chemical reactions also occur between the ultraviolet light and the water molecules, creating hydrogen gas. The oxygen and hydrogen atmospheres around the rings are very widely spaced.[52] As well as oxygen and hydrogen gas, the rings have a thin atmosphere made of hydroxide (a combination of oxygen and hydrogen called an anion), which was discovered by the Hubble Space Telescope.[53]</p>
+        </div>
+        <div id="uranus" class="planet-details">
+            <h2>Uranus</h2>
+            <p>Uranus is a gas giant with a unique tilt, causing extreme seasonal changes.<br>Uranus is the seventh planet from the Sun. It is a gaseous cyan-coloured ice giant. Most of the planet is made of water, ammonia, and methane in a supercritical phase of matter, which astronomy calls "ice" or volatiles. The planet's atmosphere has a complex layered cloud structure and has the lowest minimum temperature (49 K (−224 °C; −371 °F)) of all the Solar System's planets. It has a marked axial tilt of 82.23° with a retrograde rotation period of 17 hours and 14 minutes.<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhISExIVFRUVFRUVFRUXFRUVFRUVFRUWFhUVGBYYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGysdHyUtLTAtLS0rLS0tLS0tLy0rKzcvKy0tLS8rKy0rLzc3LS0tLTA1LisvLS0rLissLS03L//AABEIAMIBAwMBIgACEQEDEQH/xAAcAAEBAAMBAQEBAAAAAAAAAAAAAQIEBQMGBwj/xAA7EAACAQIDBAcFBgUFAAAAAAAAARECAwQhMRJBUWEFBiJxgZHwE6GxwdEHFDJCguEjUnKywkNic5Lx/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAIDBAEF/8QAIxEBAAICAwEAAgIDAAAAAAAAAAECAxEEITESQVFhsRMUFf/aAAwDAQACEQMRAD8A/DQAAKkQAUhSAACwBCplrpjL13GIAFgJAQAqQEAAGVS/84ETK6skvWZEwCfvPS3blNyklE5qc9Ipbl+B5gACADOuh0t01JpptNOU004aa48jAyrqbbbbbebbzbb1ZiAAAAAAVCQ0AIAAALkAICogGddERmnKTyz13PmYtkAFbCUkAFZ6WrkSpa2lD35axHekeRYAhQ2QCpkBZASCAAAABUQAVMAgAFXr5EArIAABWXdHD45evADEzrjdMQtdZjteEz7jAACtkAFpXFwJIAAAArZDKnjwMQBYIABWiAAChICFaIAKXaMTJKcgMS0xv+h9V0T1GxN5Kuun2VLzSa7bX9O7x8j6TDdRqKF+HafGrN/RGvFwst43rUfyqtmrV+aU2m9E6u5P6Gf3S5/I/I/UH1Za3Hhc6vxuL/8AnT+0P9ir80ditflfkebR+hX+gkcrF9DrepKr8K1Uoz1l8mlnw7/2LZr2aqXCqhp7LmHD0cNOHyZ0MX0bsvI0Llp06oyWpNfVsTEsGyAs7iLoAQAVIhUBAVogFIABWQFQEAAAy19eJGwwIAABlTS+E5xyMQBnNOy9dqVGmzsw5y1mY95gUgAAzt0OpqmlNtuElm23kklvYHv0dgrl67TatUOuupwqVDnjyjnofsfVLqPawipruJXL+rq/LQ+FtP8Au17tD26j9V6cFa2mpv3F26snsrVW6XwWUve1yR9HtHr8XifMfVvf6ZcuTfUMnbXA866yV1mvWejWrNLK40zn4hI2LlRz71RL5RauIg5GMSOhiGc3ElV69JQ4HSVpZnGdKZ38ctTg3NWeXyK9tWOenPxWFjNafD9jWttJptSpUqYlb1O468nPxliM1o/cYr013C+Ja9bUuFCnJawu8IQQrSACt5yARCsAQAAZKn3GaqS2ppVUppOWocrtKNdGuGZ5FkCAAAAUAQsEAoggAyyjfMvujKPmYgqcAQ/Q/sl6v+0uVYuumabT2bXO41nV+lPzq5H59ROi1eWW+dx/SfVjoZYTC2bMZ0ULb51vtVv/ALNmriUi19z+FWW2oe7ss8K0dSo8LlCPYrdjlzameFys37lmk1bthcS+toQaN1mpcttm/ct80atxwdmXHNv2jnYm2dW/UczE1IqtLsOFjaD5/ELtM+kxrR89iPxM8zkNWLx4ErplNM9CGZa5FdMOHuIuH0+Jt9IUaPw+hpmeY1KyEABx0LBDJUvhz8JifMDEpABSpqHlnuc6cct5iAAAAAyof79xAMlcaTSbhqGp1Upw+UpPwMWXXdovTfmYgACtgQyTgjQQHc6j4L22Pwtt6e0VT7rc3H7qT+i3bfE/DvsdsbXSVt/y27tS79h0/wCTP3uq2+B6HEnVZZ83rQqtvieVVrmb9dt8DxqtPgb63Z5hoV2eZr3LPM6Vds1rttlsXR05d2zzNK9a5nWu22aN+2zk5HPlx8Ra5nMxNvmdnEUM5WKRXa6UVcLG0nAvLtM+gxx8/Xqzz81ty044YQIMoGyUbWNfF0TQ+WfkcyTsXqezV3M4xVf1KoAZUvXg/SIJMTJVtJpN5qHnqpTh8pSfgYmWu7RfPf5gRkAAArYaAgAAz9o9nZlxMxLiYiY4mKIZqe74aZ+uYGAAAoSIVsC1rNoipCYkD7f7HMSqOlLaf57d2jx2HV/if0E8QuB/LvU/HewxuGuaJXKU3wVXYb8qmf0W9s38SsWrLPlnUujXfR414hGhVVWeFddZvrhhRNm/XiEa1zEI0q7lXM17l2ss/wASO21dxC4GhfxB4Xb1fpGhfvVkZxH0zxOIOTi8QjLEXajlYq9UVXppOJaPSV/JnDbNvpC4zQk8/JHbRXx6SJPPMZleki/V2au5/A4p08bVFD55HMK7+p1DOq42km20phS4U5uFuMAQdVEM03nGWu/KNYzMABSAAZ3KYy9eHKIMWy0uAMQAAK2QAAXazkgHpcVMJ0tvLOUlFWekNytM8u4xbXAxAAAAVn9FdTumvvWDs3ZmrZVFz/ko7NXnE/qR/Oh9x9l/WL7vedit/wAO+1D3U3Vkn+r8Pfsmni5Pm+p8lVmruvT9orrPGuom3J43Kz3IqwzJXUat2oyuXUaly4jsw5t53qjQv1HveqOfiKyEw7DVxNRx8ZWb2JrOJj7sSZcs6hbSHMxdcs8CtkPPntpCyQwu3FSm2cdafSNzNU8NfE0zKuqW2zEomdysgABwVsgKny9eAEPSqlRS05y7SiIc1QlnmoSc84PMAZOPH1+xiAAAAAArYAgLAEK0QAWMpCIWQDYIWAP1nqH1r+8UKzdq/jUrJv8A1KVv/qW9ePGPrK6j+frVboqpqoqipZpptOlp5Z8cpy4n6T1Z68U3VTaxDVFzRV6UV9/8tXufLQ9nh82Jj4ye/tky4fzV9dcrNS5ePS5WjSus9KbQzMb2IOfiMQet6o5mJr5lF7QlEbeOKxBwMbflwbeOxBy2zzc+Tc6hppXSSJKY11pKWZlitnOxV7aeWiGIxDqyWS+JrlV776hOIViCArSAWCAChkAFQSIALAbCYEAAGdy06XsuJy0qpqWan8ScbzFogAAAAAVsCAshAEiFkgAFSCA7HRXWS/YSpVW3QvyVZwv9r1Xw5Hfs9b7dS7SdD815o+HMqKG8km3DeSnJJtvuSTfgaMfKyUjUT0rtirZ9xX03belSOfielaXoz5Usk7cu9vXIwxDsV4hPNs8qsTSt5zGQonIn8t2vHcEatdbebZgVEJtMu6IIAcdVloef0MQBlRQ20km23CSUtt6JLeNlzEOeG8UtqGsms0ySBCogAAAACyAIAAAAAFSIVIBAZkm3CnLN5vJNxL9y8jFoCAACh8iFTAQCFbkAWmprRtZNZZZNQ15NojYgCumPXEOMtZ3/ACgJmIGeyob2lMxs5y5l7WkR4zmYhCpQAcBQQAVMgKgIZOlqHDz057sjEydTy5act4Eqqb1ckKQAAAKkQqZltZRC1md/d3AYAAAAAAAAAAAZ+zapVUdlt0p7m6Um14bVPmYAAWCFQFecv5mVuilqpuqGktlQ3tOUmpWmTbz4GBAALL08fp8RIEMocciNCQBCtNZdz92XxIAKgkQAAUCFpfrUQQCshllCyz+OkZeZGwIAAAAAqYTIALJDPbcOnKJT0Uyk1lVEpZvKYeXBGAFBAAMnuAAyuLKnuf8AczzAAAAAAAAAAAACthkAAAAAABXoiAAAABnTo/D4mAAAAAAAAAAAAAAAB//Z"> This means that in an 84-Earth-year orbital period around the Sun, its poles get around 42 years of continuous sunlight, followed by 42 years of continuous darkness.
+
+                Uranus has the third-largest diameter and fourth-largest mass among the Solar System's planets. Based on current models, inside its volatile mantle layer is a rocky core, and surrounding it is a thick hydrogen and helium atmosphere. Trace amounts of hydrocarbons (thought to be produced via hydrolysis) and carbon monoxide along with carbon dioxide (thought to have been originated from comets) have been detected in the upper atmosphere. There are many unexplained climate phenomena in Uranus's atmosphere, such as its peak wind speed of 900 km/h (560 mph),[23] variations in its polar cap, and its erratic cloud formation. The planet also has very low internal heat compared to other giant planets, the cause of which remains unclear.
+                
+                Like the other giant planets, Uranus has a ring system, a magnetosphere, and many natural satellites. The extremely dark ring system reflects only about 2% of the incoming light. Uranus's 28 natural satellites include 18 known regular moons, of which 13 are small inner moons. Further out are the larger five major moons of the planet: Miranda, Ariel, Umbriel, Titania, and Oberon. Orbiting at a much greater distance from Uranus are the ten known irregular moons. The planet's magnetosphere is highly asymmetric and has many charged particles, which may be the cause of the darkening of its rings and moons.
+                
+                Uranus is visible to the naked eye, but it is very dim and was not classified as a planet until 1781, when it was first observed by William Herschel. About seven decades after its discovery, consensus was reached that the planet be named after the Greek god Uranus (Ouranos), one of the Greek primordial deities. As of 2024, it had been visited up close only once when in 1986 the Voyager 2 probe flew by the planet.[24] Though nowadays it can be resolved and observed by telescopes, there is much desire to revisit the planet, as shown by Planetary Science Decadal Survey's decision to make the proposed Uranus Orbiter and Probe mission a top priority in the 2023–2032 survey, and the CNSA's proposal to fly by the planet with a subprobe of Tianwen-4.[25]<br>
+                
+                <h1>History</h1></p>
+        </div>
+        <div id="neptune" class="planet-details">
+            <h2>Neptune</h2>
+            
+            <p id="m1">Neptune is known for its intense blue color and supersonic winds.  <br>
+                Neptune is the eighth and farthest known planet from the Sun. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth.<br><img src=" https://t3.ftcdn.net/jpg/01/27/85/56/360_F_127855687_32T7U5Z44GuVk2OCwNoag3oTcGBzly3e.jpg" ><br> Compared to its fellow ice giant Uranus, Neptune is slightly more massive, but denser and smaller. Being composed primarily of gases and liquids,[21] it has no well-defined solid surface, and orbits the Sun once every 164.8 years at an orbital distance of 30.1 astronomical units (4.5 billion kilometres; 2.8 billion miles). It is named after the Roman god of the sea and has the astronomical symbol ♆, representing Neptune's trident.[e]
+
+                Neptune is not visible to the unaided eye and is the only planet in the Solar System that was not initially observed by direct empirical observation. Rather, unexpected changes in the orbit of Uranus led Alexis Bouvard to hypothesise that its orbit was subject to gravitational perturbation by an unknown planet. After Bouvard's death, the position of Neptune was mathematically predicted from his observations, independently, by John Couch Adams and Urbain Le Verrier.<br> Neptune was subsequently directly observed with a telescope on 23 September 1846[2] by Johann Gottfried Galle within a degree of the position predicted by Le Verrier. Its largest moon, Triton, was discovered shortly thereafter, though none of the planet's remaining moons were located telescopically until the 20th century.
+                
+                The planet's distance from Earth gives it a small apparent size, and its distance from the Sun renders it very dim, making it challenging to study with Earth-based telescopes. Only the advent of the Hubble Space Telescope and of large ground-based telescopes with adaptive optics allowed for detailed observations. Neptune was visited by Voyager 2, which flew by the planet on 25 August 1989; Voyager 2 remains the only spacecraft to have visited it.[22][23] Like the gas giants (Jupiter and Saturn), Neptune's atmosphere is composed primarily of hydrogen and helium, along with traces of hydrocarbons and possibly nitrogen, but contains a higher proportion of ices such as water, ammonia and methane. Similar to Uranus, its interior is primarily composed of ices and rock;[24] both planets are normally considered "ice giants" to distinguish them.[25] Along with Rayleigh scattering, traces of methane in the outermost regions make Neptune appear faintly blue.[26][27]
+                
+                In contrast to the strongly seasonal atmosphere of Uranus, which can be featureless for long periods of time, Neptune's atmosphere has active and consistently visible weather patterns. At the time of the Voyager 2 flyby in 1989, the planet's southern hemisphere had a Great Dark Spot comparable to the Great Red Spot on Jupiter. In 2018, a newer main dark spot and smaller dark spot were identified and studied.[28] These weather patterns are driven by the strongest sustained winds of any planet in the Solar System, as high as 2,100 km/h (580 m/s; 1,300 mph).[29] Because of its great distance from the Sun, Neptune's outer atmosphere is one of the coldest places in the Solar System, with temperatures at its cloud tops approaching 55 K (−218 °C; −361 °F). Temperatures at the planet's centre are approximately 5,400 K (5,100 °C; 9,300 °F).[30][31] Neptune has a faint and fragmented ring system (labelled "arcs"), discovered in 1984 and confirmed by Voyager 2.[32]<br><h1>Physical characteristics<br></h1>Neptune's mass of 1.0243×1026 kg[8] is intermediate between Earth and the larger gas giants: it is 17 times that of Earth but just 1/19th that of Jupiter.[g] Its gravity at 1 bar is 11.15 m/s2, 1.14 times the surface gravity of Earth,[71] and surpassed only by Jupiter.[72] Neptune's equatorial radius of 24,764 km[11] is nearly four times that of Earth. Neptune, like Uranus, is an ice giant, a subclass of giant planet, because they are smaller and have higher concentrations of volatiles than Jupiter and Saturn.[73] In the search for exoplanets, Neptune has been used as a metonym: discovered bodies of similar mass are often referred to as "Neptunes",[74] just as scientists refer to various extrasolar bodies as "Jupiters".<br><h1>Planetary rings</h1><br>Neptune has a planetary ring system, though one much less substantial than that of Saturn and Uranus.[167] The rings may consist of ice particles coated with silicates or carbon-based material, which most likely gives them a reddish hue.[168] The three main rings are the narrow Adams Ring, 63,000 km from the centre of Neptune, the Le Verrier Ring, at 53,000 km, and the broader, fainter Galle Ring, at 42,000 km. A faint outward extension to the Le Verrier Ring has been named Lassell; it is bounded at its outer edge by the Arago Ring at 57,000 km.[169]
+
+The first of these planetary rings was detected in 1968 by a team led by Edward Guinan.[32][170] In the early 1980s, analysis of this data along with newer observations led to the hypothesis that this ring might be incomplete.[171] Evidence that the rings might have gaps first arose during a stellar occultation in 1984 when the rings obscured a star on immersion but not on emersion.[172] Images from Voyager 2 in 1989 settled the issue by showing several faint rings.
+
+The outermost ring, Adams, contains five prominent arcs now named Courage, Liberté, Egalité 1, Egalité 2 and Fraternité (Courage, Liberty, Equality and Fraternity).[173] The existence of arcs was difficult to explain because the laws of motion would predict that arcs would spread out into a uniform ring over short timescales. Astronomers now estimate that the arcs are corralled into their current form by the gravitational effects of Galatea, a moon just inward from the ring.[174][175]
+
+Earth-based observations announced in 2005 appeared to show that Neptune's rings were much more unstable than previously thought. Images taken from the W. M. Keck Observatory in 2002 and 2003 show considerable decay in the rings when compared to images by Voyager 2. In particular, it seems that the Liberté arc might disappear in as little as one century.</p>
+        </div>
+        <a href="#about-PLUTO"> PLUTO...</a>
+        <div id="pluto" class="planet-details">
+         
+            
+            <h2 >Pluto</h2>
+            <style></style>
+            
+            <p ><h1>Pluto, once considered the ninth planet, is now classified as a dwarf planet.</h1><br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8L8IJD-MP3RC_t3DtfcsqFFoIFZnuuPEpNw&s ">This article is about the dwarf planet. For the deity, see Pluto (mythology). For other uses, see Pluto (disambiguation).
+                134340 Pluto
+                
+                Pluto, imaged by the New Horizons spacecraft, July 2015.[a] The most prominent feature in the image, the bright, youthful plains of Tombaugh Regio and Sputnik Planitia, can be seen at right. It contrasts the darker, cratered terrain of Belton Regio at lower left.
+                Discovery
+                Discovered by	Clyde W. Tombaugh
+                Discovery site	Lowell Observatory
+                Discovery date	February 18, 1930
+                Designations
+                MPC designation	(134340) Pluto
+                Pronunciation	/ˈpluːtoʊ/ ⓘ
+                Named after	Pluto
+                Minor planet category	
+                Dwarf planet
+                Trans-Neptunian object
+                Kuiper belt object
+                Plutino
+                Adjectives	Plutonian /pluːˈtoʊniən/[1]
+                Symbol	♇ or ⯓
+                Orbital characteristics[2][b]
+                Epoch J2000
+                Earliest precovery date	August 20, 1909
+                Aphelion	
+                49.305 AU
+                (7.37593 billion km)
+                February 2114
+                Perihelion	
+                29.658 AU
+                (4.43682 billion km)[3]
+                (September 5, 1989)[4]
+                Semi-major axis	
+                39.482 AU
+                (5.90638 billion km)
+                Eccentricity	0.2488
+                Orbital period (sidereal)	
+                247.94 years[3]
+                90,560 d[3]
+                Orbital period (synodic)	366.73 days[3]
+                Average orbital speed	4.743 km/s[3]
+                Mean anomaly	14.53 deg
+                Inclination	
+                17.16°
+                (11.88° to Sun's equator)
+                Longitude of ascending node	110.299°
+                Argument of perihelion	113.834°
+                Known satellites	5
+                Physical characteristics
+                Dimensions	2,376.6±1.6 km (observations consistent with a sphere, predicted deviations too small to be observed)[5]
+                Mean radius	
+                1,188.3±0.8 km[6][5]
+                0.1868 Earths
+                Flattening	1%[7]
+                Surface area	
+                1.774443×107 km2[c]
+                0.035 Earths
+                Volume	
+                (7.057±0.004)×109 km3[d]
+                0.00651 Earths
+                Mass	
+                (1.3025±0.0006)×1022 kg[8]
+                0.00218 Earths
+                0.177 Moons
+                Mean density	1.853±0.004 g/cm3[8]
+                Equatorial surface gravity	0.620 m/s2 (0.0632 g0)[e]
+                Equatorial escape velocity	1.212 km/s[f]
+                Synodic rotation period	
+                −6.38680 d
+                −6 d, 9 h, 17 m, 00 s
+                [9]
+                Sidereal rotation period	
+                −6.387230 d
+                −6 d, 9 h, 17 m, 36 s
+                Equatorial rotation velocity	13.11 m/s[citation needed]
+                Axial tilt	122.53° (to orbit)[3]
+                North pole right ascension	132.993°[10]
+                North pole declination	−6.163°[10]
+                Geometric albedo	0.52 geometric[3]
+                0.72 Bond[3]
+                Surface temp.	min	mean	max
+                Kelvin	33 K	44 K (−229 °C)	55 K
+                Apparent magnitude	13.65[3] to 16.3[11]
+                (mean is 15.1)[3]
+                Absolute magnitude (H)	−0.44[12]
+                Angular diameter	0.06″ to 0.11″[3][g]
+                Atmosphere
+                Surface pressure	1.0 Pa (2015)[7][13]
+                Composition by volume	Nitrogen, methane, carbon monoxide[14]
+                Pluto (minor-planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It is the ninth-largest and tenth-most-massive known object to directly orbit the Sun. It is the largest known trans-Neptunian object by volume, by a small margin, but is less massive than Eris. Like other Kuiper belt objects, Pluto is made primarily of ice and rock and is much smaller than the inner planets. Pluto has roughly one-sixth the mass of the Moon, and one-third its volume.
+                
+                Pluto has a moderately eccentric and inclined orbit, ranging from 30 to 49 astronomical units (4.5 to 7.3 billion kilometres; 2.8 to 4.6 billion miles) from the Sun. Light from the Sun takes 5.5 hours to reach Pluto at its orbital distance of 39.5 AU (5.91 billion km; 3.67 billion mi). Pluto's eccentric orbit periodically brings it closer to the Sun than Neptune, but a stable orbital resonance prevents them from colliding.
+                
+                Pluto has five known moons: Charon, the largest, whose diameter is just over half that of Pluto; Styx; Nix; Kerberos; and Hydra. Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits does not lie within either body, and they are tidally locked. New Horizons was the first spacecraft to visit Pluto and its moons, making a flyby on July 14, 2015, and taking detailed measurements and observations.
+                
+                Pluto was discovered in 1930 by Clyde W. Tombaugh, making it by far the first known object in the Kuiper belt. It was immediately hailed as the ninth planet. However,[15]: 27  its planetary status was questioned when it was found to be much smaller than expected. These doubts increased following the discovery of additional objects in the Kuiper belt starting in the 1990s, and particularly the more massive scattered disk object Eris in 2005. In 2006, the International Astronomical Union (IAU) formally redefined the term planet to exclude dwarf planets such as Pluto. Many planetary astronomers, however, continue to consider Pluto and other dwarf planets to be planets.<br> <li> More To Know <a href="https://science.nasa.gov/dwarf-planets/pluto/">CLICK</a></li></p>
+        </div>
+
+        <section id="about-earth">
+            <h1 class="world">Hello World!</h1>
+            <h2 class="world">Few facts about the world we live in</h2>
+            <p><img src="world.jpg" width="400" alt="Image of the World"></p>
+            <p class="hm">Skip to main content...</p>
+            <h2>About The Earth</h2>
+            <ul class="world">
+                <li>Earth isn't actually round.</li>
+                <li>Antarctica is home to the largest ice sheet on Earth.</li>
+                <li>Earth has a squishy interior.</li>
+                <li>Coral reefs are Earth's largest living structure.</li>
+                <li>The Moon is drifting away from Earth.</li>
+                <li>More To Know <a href="https://www.nasa.gov/">CLICK</a></li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/apCIHrIAtU4?si=_SekGgyiZM4gzbQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="facts">
+            <h2 class="world">Top Three Facts About Earth</h2>
+            <ol class="hate world">
+                <li class="god">Earth isn't actually round.</li>
+                <li class="god">Coral reefs are Earth's largest living structure.</li>
+                <li class="god">Earth has a squishy interior.</li>
+            </ol>
+        </section>
+
+        <section id="planet-table">
+            <h2 class="world">Planet Table</h2>
+            <table border="5" class="world">
+                <thead>
+                    <tr>
+                        <th>PLANET NAME</th>
+                        <th>SIZE</th>
+                        <th>COLOUR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MERCURY</td>
+                        <td>4,879 Km</td>
+                        <td>Grey</td>
+                    </tr>
+                    <tr>
+                        <td>VENUS</td>
+                        <td>12,104 Km</td>
+                        <td>Yellowish-White</td>
+                    </tr>
+                    <tr>
+                        <td>EARTH</td>
+                        <td>12,742 Km</td>
+                        <td>Blue and Green</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><br>
+<img src="https://media.istockphoto.com/id/464902060/vector/solar-system-planets-diagram.jpg?s=612x612&w=0&k=20&c=yawrrevaqeTOlWdY0KgG-zDMhk_ilS7siOtfxiNeZOQ=">
+
+        <section id="know">
+            <h2 class="world">What YOU KNOW...</h2>
+            <form action="">
+                <input class="world" type="text" placeholder="Enter your thoughts">
+                <input type="submit" class="love" value="Submit">
+            </form>
+        </section>
+    </body>
+</html>
